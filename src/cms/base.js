@@ -7,6 +7,7 @@
 		log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
 		checkOrigin: false,
 		heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
+		tolerance: 5
 	}, iframe);
 
 	/**
