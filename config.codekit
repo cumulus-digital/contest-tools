@@ -446,6 +446,22 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
+	"\/src\/contest\/bandsintown.styl": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"fileType": 8,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"importCSS": 1,
+		"inputAbbreviatedPath": "\/src\/contest\/bandsintown.styl",
+		"outputAbbreviatedPath": "\/dist\/contest\/bandsintown.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"resolveRelativeURLS": 1,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0
+		},
 	"\/src\/contest\/base.js": {
 		"fileType": 64,
 		"ignore": 0,
