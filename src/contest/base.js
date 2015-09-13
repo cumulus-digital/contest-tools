@@ -2,6 +2,14 @@
 
 (function($, window, undefined) {
 
+	function log() {
+		if (typeof console === 'object' && console.log) {
+			var ts = (new Date());
+			ts = ts.toISOString() ? ts.toISOString() : ts.toUTCString();
+			console.log('[CMLS Contesting]', ts, [].slice.call(arguments));
+		}
+	}
+
 	$(function() {
 
 		// Do not run the following code if we're in the contest designer.
@@ -42,6 +50,7 @@
 		if (window.top !== window.self || ! id) {
 			return;
 		}
+		log('Installing Google Analytics ID ', id);
 
 		/* jshint ignore:start */
 		/*jsl:ignore* /
