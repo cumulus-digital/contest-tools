@@ -31,6 +31,9 @@ body {
 	#container-footer {
 		box-shadow: none !important;
 	}
+	#container-bg {
+		padding: 0 !important;
+	}
 	#container-contentbg {
 		@media (max-width: 694px) {
 			padding: 0 !important;
@@ -99,10 +102,13 @@ body {
 }
 .twitter-mobile {
 	display: none;
-	@media (max-width: 500px) {
+	@media (max-width: 600px) {
 		display: block;
 		/.twitter-desktop {
 			display: none;
+		}
+		/.fb-page {
+			text-align: center;
 		}
 	}
 }
