@@ -1,7 +1,9 @@
 .cm-container {
-	margin-bottom: 1em;
+	border-bottom: 1px solid #444;
+	margin-bottom: 0.75em;
 	margin-top: 1em;
 	overflow: hidden;
+	padding-bottom: 1em;
 	position: relative;
 
 	img {
@@ -58,6 +60,18 @@
 			float: right;
 			padding-right: 0;
 			padding-left: 0.6em;
+
+			> div {
+				border-bottom: 1px solid #444;
+				margin-bottom: 1em;
+				padding-bottom: 1em;
+				
+				:last-child {
+					border-bottom: 0;
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
 		}
 		
 	.buttonlinks {
@@ -109,5 +123,37 @@
 				left: 0;
 			}
 		}
+	}
+	
+	.cm-albumcover {
+		img {
+			border: 3px solid #FFF;
+		}
+		
+		.cm-albumname {
+			font-size: 120%;
+			font-weight: bold;
+			margin: 1em 0 .75em;
+			
+			small {
+				font-size: 90%;
+			}
+		}
+	}
+	
+	.cm-twitter-mobile {
+		display: none;
+		
+		@media (max-width: 600px) {
+			display: block;
+		
+			/.cm-twitter-desktop {
+				display: none;
+			}
+		}
+	}
+	
+	.cm-facebook {
+		width: 99%;
 	}
 }
