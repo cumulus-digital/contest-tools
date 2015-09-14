@@ -66,7 +66,7 @@
 				margin-bottom: 1em;
 				padding-bottom: 1em;
 				
-				:last-child {
+				&:last-child {
 					border-bottom: 0;
 					margin-bottom: 0;
 					padding-bottom: 0;
@@ -126,17 +126,30 @@
 	}
 	
 	.cm-albumcover {
+		text-align: center;
+
 		img {
 			border: 3px solid #FFF;
+			width: 98%
 		}
 		
 		.cm-albumname {
 			font-size: 120%;
 			font-weight: bold;
-			margin: 1em 0 .75em;
+			margin: .75em 0;
 			
 			small {
 				font-size: 90%;
+			}
+		}
+		
+		.cm-buybutton {
+			display: inline-block;
+			text-align: center;
+			
+			img {
+				border: 0;
+				width: auto;
 			}
 		}
 	}
