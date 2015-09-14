@@ -10,6 +10,14 @@
 		tolerance: 5
 	}, iframe);
 
+	// Hide AddThis for contests
+	document.addEventListener("DOMContentLoaded", function() {
+		var addThis = window.document.getElementsByClassName('.at4-share-outer');
+		for(var i = 0; i < addThis.length; i++) {
+			addThis[i].style.display = 'none';
+		}
+	});
+
 	/**
 	 * Installs Google Analytics only if we're not inside an iframe.
 	 * @param  {string} id GA Property ID
