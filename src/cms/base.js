@@ -15,6 +15,7 @@
 		var addThis = window.document.getElementsByClassName('.at4-share-outer');
 		if ( ! addThis.length) {
 			setTimeout(hideAddThis, 100);
+			return;
 		}
 		for(var i = 0; i < addThis.length; i++) {
 			addThis[i].style.display = 'none';
