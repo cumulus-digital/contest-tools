@@ -12,7 +12,7 @@
 
 	// Hide AddThis for contests
 	function hideAddThis() {
-		var addThis = window.document.getElementsByClassName('.at4-share-outer');
+		var addThis = window.document.getElementsByClassName('at4-share-outer');
 		if ( ! addThis.length) {
 			setTimeout(hideAddThis, 100);
 			return;
