@@ -15,7 +15,7 @@
 		// Do not run the following code if we're in the contest designer.
 		// Prevents code that alters page structure from having that new page
 		// structure saved permanently.
-		if ($('body.contest-sweeps').length < 1) {
+		if ($('body.contest-sweeps,body.contest-ugc').length < 1) {
 			return;
 		}
 
