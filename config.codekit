@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19051",
+"creatorBuild": "19076",
 "files": {
 	"\/bower_components\/iframe-resizer\/bower.json": {
 		"fileType": 524288,
@@ -35,6 +35,17 @@
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -46,12 +57,34 @@
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/iframe-resizer\/js\/iframeResizer.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/iframeResizer.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/iframeResizer.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/iframeResizer.min.js",
 		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/iframeResizer.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/iframe-resizer\/js\/index.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/index.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/js\/index.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
@@ -90,12 +123,12 @@
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
-	"\/bower_components\/iframe-resizer\/spec\/backgroundSpec.js": {
+	"\/bower_components\/iframe-resizer\/spec\/childSpec.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/backgroundSpec.js",
-		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/backgroundSpec.js",
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/childSpec.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/childSpec.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
@@ -112,12 +145,12 @@
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
-	"\/bower_components\/iframe-resizer\/spec\/eventsSpec.js": {
+	"\/bower_components\/iframe-resizer\/spec\/getPageInfoSpec.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/eventsSpec.js",
-		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/eventsSpec.js",
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/getPageInfoSpec.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/getPageInfoSpec.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
@@ -145,6 +178,17 @@
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
+	"\/bower_components\/iframe-resizer\/spec\/initDoubleCallSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/initDoubleCallSpec.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/initDoubleCallSpec.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower_components\/iframe-resizer\/spec\/initErrorSpec.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -162,6 +206,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/initJQuerySpec.js",
 		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/initJQuerySpec.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/iframe-resizer\/spec\/initUndefinedDomSpec.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/initUndefinedDomSpec.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/initUndefinedDomSpec.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
@@ -185,6 +240,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe600WithId.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe600WithId.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/bower_components\/iframe-resizer\/spec\/lib\/common.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -196,12 +260,12 @@
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
-	"\/bower_components\/iframe-resizer\/spec\/parentIFrameMethodsSpec.js": {
+	"\/bower_components\/iframe-resizer\/spec\/parentSpec.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/parentIFrameMethodsSpec.js",
-		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/parentIFrameMethodsSpec.js",
+		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/parentSpec.js",
+		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/spec\/parentSpec.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
@@ -295,17 +359,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/src\/iframeResizer.js",
 		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/dist\/iframeResizer.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 2,
-		"syntaxCheckerStyle": 1
-		},
-	"\/bower_components\/iframe-resizer\/src\/index.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/iframe-resizer\/src\/index.js",
-		"outputAbbreviatedPath": "\/bower_components\/iframe-resizer\/dist\/index.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
@@ -1186,7 +1239,9 @@
 	"typescriptAutoOutputPathStyle": 2,
 	"typescriptCreateDeclarationFile": 0,
 	"typescriptCreateSourceMap": 0,
+	"typescriptJSXMode": 0,
 	"typescriptMinifyOutput": 0,
+	"typescriptModuleResolutionType": 0,
 	"typescriptModuleType": 0,
 	"typescriptNoImplicitAny": 0,
 	"typescriptPreserveConstEnums": 0,

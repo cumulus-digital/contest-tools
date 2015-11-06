@@ -3,7 +3,7 @@
 (function(window, undefined){
 	var iframe = window.document.querySelector('.entry-content iframe'),
 		isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
-	window.iFrameResize({
+	window.contestIframeResizerObject = window.iFrameResize({
 		log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
 		checkOrigin: false,
 		heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
@@ -21,7 +21,7 @@
 			addThis[i].style.display = 'none';
 		}		
 	}
-	document.addEventListener("DOMContentLoaded", function() {
+	window.document.addEventListener("DOMContentLoaded", function() {
 		hideAddThis();
 	});
 
