@@ -12,18 +12,16 @@
 
 	// Hide AddThis for contests
 	function hideAddThis() {
-		var addThis = window.document.getElementsByClassName('at4-share-outer');
-		if ( ! addThis.length) {
-			setTimeout(hideAddThis, 100);
-			return;
+		if (window.addthis) {
+			window.addthis.layers(function(layer) {
+				layer.destroy();
+			});
 		}
-		for(var i = 0; i < addThis.length; i++) {
-			addThis[i].style.display = 'none';
-		}		
 	}
 	window.document.addEventListener("DOMContentLoaded", function() {
 		hideAddThis();
 	});
+	window.NO_ADDTHIS_HERE = true;
 
 	// If we're jumping around with History.js, destroy the iframe after we leave.
 	function removeIframeResizer() {
