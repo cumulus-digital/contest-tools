@@ -25,6 +25,19 @@
 		hideAddThis();
 	});
 
+	// If we're jumping around with History.js, destroy the iframe after we leave.
+	function removeIframeResizer() {
+		if (window.contestIframeResizerObject) {
+			window.contestIframeResizerObject[0].iFrameResizer.close();
+		}
+		if (window.History && window.History.Adapter) {
+			window.History.Adapter.unbind(window, 'pageChange', removeIframeResizer);
+		}
+	}
+	if (window.History && window.History.Adapter) {
+		window.History.Adapter.bind(window, 'pageChange', removeIframeResizer);
+	}
+
 	/**
 	 * Installs Google Analytics only if we're not inside an iframe.
 	 * @param  {string} id GA Property ID
