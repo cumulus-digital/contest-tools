@@ -1,4 +1,4 @@
-// @codekit-prepend "../../bower_components/iframe-resizer/src/iframeResizer.contentWindow.js";
+// @codekit-prepend "../../bower_components/iframe-resizer/js/iframeResizer.contentWindow.js";
 
 (function($, window, undefined) {
 
