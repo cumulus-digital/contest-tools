@@ -29,11 +29,11 @@
 			window.contestIframeResizerObject[0].iFrameResizer.close();
 		}
 		if (window.History && window.History.Adapter) {
-			window.History.Adapter.unbind(window, 'pageChange', removeIframeResizer);
+			window.History.Adapter.unbind(window, 'statechange', removeIframeResizer);
 		}
 	}
 	if (window.History && window.History.Adapter) {
-		window.History.Adapter.bind(window, 'pageChange', removeIframeResizer);
+		window.History.Adapter.bind(window, 'statechange', removeIframeResizer);
 	}
 
 	/**
