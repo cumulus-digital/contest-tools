@@ -1,5 +1,7 @@
 @require '../cms/fullwidth.styl'
 
+$breakpoint = 720px
+
 .t2w-main {
 	background: #eee;
 	color: #000;
@@ -32,7 +34,7 @@
 		position: absolute;
 		z-index: 1;
 		
-		@media (max-width: 660px) {
+		@media (max-width: ($breakpoint*.9)) {
 			display: none;
 		}
 		
@@ -71,7 +73,7 @@
 			width: 46.42857143%;
 		}
 		
-		@media(max-width: 720px) {
+		@media(max-width: $breakpoint) {
 			&,&.t2w-right {
 				display: block;
 				padding: 0 20px;
@@ -136,8 +138,12 @@
 			text-decoration: none !important;
 			text-transform: uppercase !important;
 			
+			@media (max-width: $breakpoint) {
+				font-size: 4vw !important;
+			}
+			
 			&:hover {
-				background: #AAA;
+				background: #AAA !important;
 			}
 			
 			&.t2w-right {
@@ -154,6 +160,10 @@
 			padding-top: 2px;
 			text-transform: uppercase !important;
 			
+			@media (max-width: $breakpoint) {
+				font-size: 4vw !important;
+			}
+
 			strong {
 				color: #333 !important;
 			}
@@ -165,13 +175,17 @@
 			font-weight: bold;
 			line-height: 1;
 			text-transform: uppercase !important;
+			
+			@media (max-width: $breakpoint) {
+				font-size: 2.75vw !important;
+			}
 		}
 	}
 }
 
 .t2w-main .twitter-timeline { width: 99.5% !important; }
 .t2w-twitter-mobile { display: none; }
-@media (max-width: 600px) {
+@media (max-width: $breakpoint) {
 	.t2w-twitter-mobile { display: block; }
 	.t2w-twitter-desktop { display: none; }
 }
