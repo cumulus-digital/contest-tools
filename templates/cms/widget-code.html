@@ -1,14 +1,29 @@
+<script type="text/javascript" id="CMLS_CONTEST_ID">
+/**
+ * Add an identifier to the parent column so we can work with JUST our content.
+ */
+(function($, window, undefined){
+	var tag = $('#CMLS_CONTEST_ID');
+	if (tag) {
+		tag.parentsUntil('.column').addClass('CMLS_CONTEST_CONTENT');
+		tag.parentsUntil('.row').addClass('CMLS_CONTEST_CONTENT');
+	}
+}(jQuery, window));
+</script>
+
 <!--
 	Include either base OR fullwidth styles, not both!
 -->
 <!--
-<link href="dist/cms/base.css" rel="stylesheet" type="text/css">
+<link href="CHANGEME/dist/cms/base.css" rel="stylesheet" type="text/css">
 -->
 <!--
-<link href="dist/cms/fullwidth.css" rel="stylesheet" type="text/css">
+<link href="CHANGEME/dist/cms/fullwidth.css" rel="stylesheet" type="text/css">
 -->
-<script src="dist/cms/base.js" type="text/javascript"></script>
+<script src="CHANGEME/dist/cms/base.js" type="text/javascript"></script>
 <script type="text/javascript">
 	// Install Google Analytics
 	installGoogleAnalytics('UA-########-##');
 </script>
+
+<!-- ADD YOUR CONTENT BELOW -->

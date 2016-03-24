@@ -1,0 +1,192 @@
+@require '../cms/fullwidth.styl'
+
+.t2w-main {
+	background: #eee;
+	color: #000;
+	font-family: 'Oswald', sans-serif !important;
+	
+	p,a {
+		font-family: inherit !important;
+	}
+}
+
+.t2w-container {
+	background-color: #fff;
+	box-shadow: 0 0 100px rgba(0,0,0,0.3);
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 800px;
+	padding-bottom: 50px;
+	position: relative;
+	width: 100%;
+}
+
+.t2w-header {
+	height: auto;
+	overflow: visible;
+	position: relative;
+	z-index: 2;
+	
+	.t2w-iphone {
+		bottom: -192px;
+		position: absolute;
+		z-index: 1;
+		
+		@media (max-width: 660px) {
+			display: none;
+		}
+		
+		&.t2w-left {
+			left: -118px;
+		}
+		&.t2w-right {
+			right: -93px;
+		}
+	}
+}
+
+.t2w-video {
+	position: relative;
+	z-index: 3;
+}
+
+.t2w-body {
+	padding: 20px 0;
+}	
+.t2w-row {
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 0 0 10px;
+	width: 100%;
+	
+	.t2w-col {
+		box-sizing: border-box;
+		display: inline-block;
+		padding: 0 3.333333%;
+		vertical-align: top;
+		width: 50%;
+		
+		&.t2w-right {
+			padding: 0 3.333333% 0 0;
+			width: 4642857143%;
+		}
+		
+		@media(max-width: 720px) {
+			display: block;
+			padding: 0 20px;
+			width: 100%;
+		}
+	}
+}
+
+.t2w-details {
+	font-size: 24.5px !important;
+	padding-bottom: 30px;
+	text-align: left;
+	
+	.t2w-rules {
+		clear: both;
+		color: inherit;
+		float: right;
+		font-family: sans-serif !important;
+		font-size: 10px !important;
+		opacity: 0.6;
+		
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
+.t2w-bit-header {
+	background: #999;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 18px !important;
+	line-height: 1 !important;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.t2w-album {
+	line-height: 1 !important;
+	margin-bottom: 5px;
+	
+	img.t2w-albumcover {
+		width: 100%;
+	}
+
+	.t2w-album-purchase {
+		margin: 10px 0;
+		
+		.t2w-orderbutton {
+			background: #888 !important;
+			border-radius: 3px;
+			color: #fff !important;
+			float: left;
+			font-size: 16px !important;
+			font-weight: 500;
+			line-height: 1;
+			margin: 0 5px 0 0;
+			padding: 12px;
+			text-decoration: none !important;
+			text-transform: uppercase !important;
+			
+			&:hover {
+				background: #AAA;
+			}
+			
+			&.t2w-right {
+				float: right;
+				margin: 0 0 0 5px;
+			}
+		}
+		
+		.t2w-album-name {
+			color: #666 !important;
+			font-size: 20.6px !important;
+			font-weight: 300;
+			line-height: 1;
+			padding-top: 2px;
+			text-transform: uppercase !important;
+			
+			strong {
+				color: #333 !important;
+			}
+		}
+		
+		.t2w-album-availability {
+			color: #333 !important;
+			font-size: 16.05px !important;
+			font-weight: bold;
+			line-height: 1;
+			text-transform: uppercase !important;
+		}
+	}
+}
+
+.t2w-main .twitter-timeline { width: 99.5% !important; }
+.t2w-twitter-mobile { display: none; }
+@media (max-width: 600px) {
+	.t2w-twitter-mobile { display: block; }
+	.t2w-twitter-desktop { display: none; }
+}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+td.bit-rsvp { display: none; }
