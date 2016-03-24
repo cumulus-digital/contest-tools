@@ -5,8 +5,8 @@
 (function($, window, undefined){
 	var tag = $('#CMLS_CONTEST_ID');
 	if (tag) {
-		tag.parentsUntil('.column').addClass('CMLS_CONTEST_CONTENT');
-		tag.parentsUntil('.row').addClass('CMLS_CONTEST_CONTENT');
+		tag.parentsUntil('.wrapper-content','.column').addClass('CMLS_CONTEST_CONTENT');
+		tag.parentsUntil('.wrapper-content','.row').addClass('CMLS_CONTEST_CONTENT');
 	}
 }(jQuery, window));
 </script>
@@ -15,7 +15,7 @@
 <link href="CHANGEME/dist/cms/fullwidth.css" rel="stylesheet" type="text/css">
 
 <!-- Installs common script -->
-<script src="CHANGEME/dist/cms/base.js" type="text/javascript"></script>
+<script src="CHANGEME/dist/text-to-win/base.js" type="text/javascript"></script>
 <script type="text/javascript">
 	// Install Google Analytics
 	installGoogleAnalytics('UA-########-##');
@@ -83,7 +83,7 @@
 
 		<div class="t2w-header">
 			<!-- IPHONE IMAGE -->
-			<img src="" class="t2w-iphone">
+			<img src="" class="t2w-iphone t2w-right">
 
 			<!-- HEADER IMAGE -->
 			<img src="" width="100%">
@@ -131,6 +131,7 @@
 						<a class="twitter-timeline" data-screen-name="CHANGEME" data-theme="light" data-dnt="true" href="https://twitter.com/CHANGEME" data-widget-id="555779576849502208" data-chrome="noborders" width="99.9%" data-link-color="#CHANGEME" data-tweet-limit="1" >Tweets by @CHANGEME</a>
 					</div>
 
+					<div class="fb-page" data-href="https://www.facebook.com/CHANGEME" data-width="390" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
 
 				</div>
 
