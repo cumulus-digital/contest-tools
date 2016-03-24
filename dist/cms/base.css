@@ -1,2 +1,2 @@
-.author-dvena #comments,.author-dvena header,.author-dvena .entry-title,.author-dvena .entry-meta,.author-dvena .post-thumbnail,.author-dvena p.hideme{display:none !important}
+iframe[src*="digitalivy.com"]{display:inherit}body .wrapper-content .CMLS_CONTEST_CONTENT #comments,body .wrapper-content .CMLS_CONTEST_CONTENT article > header,body .wrapper-content .CMLS_CONTEST_CONTENT article > footer,body .wrapper-content .CMLS_CONTEST_CONTENT .entry-title,body .wrapper-content .CMLS_CONTEST_CONTENT .entry-meta,body .wrapper-content .CMLS_CONTEST_CONTENT .post-thumbnail,body .wrapper-content .CMLS_CONTEST_CONTENT .hideme{display:none !important}body .wrapper-content .CMLS_CONTEST_CONTENT .entry-content{margin-top:0 !important}
 /*# sourceMappingURL=base.css.map */
