@@ -5,8 +5,7 @@
 (function($, window, undefined){
 	var tag = $('#CMLS_CONTEST_ID');
 	if (tag) {
-		tag.parentsUntil('.wrapper-content','.column').addClass('CMLS_CONTEST_CONTENT');
-		tag.parentsUntil('.wrapper-content','.row').addClass('CMLS_CONTEST_CONTENT');
+		tag.parentsUntil('.wrapper-content','.column,.row,.block-type-content').addClass('CMLS_CONTEST_CONTENT');
 	}
 }(jQuery, window));
 </script>
