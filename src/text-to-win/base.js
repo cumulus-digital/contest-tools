@@ -22,7 +22,7 @@
 			ts = new Date(Date.parse(ts));
 		}
 		if ( ! (ts instanceof Date) || isNaN(ts.getTime())) {
-			log('Supplied expireReplace timestamp is an invalid date.');
+			log('Supplied expireReplace timestamp is an invalid date.', ts, ts instanceof Date);
 			return;
 		}
 		if (Date.now() > ts) {
