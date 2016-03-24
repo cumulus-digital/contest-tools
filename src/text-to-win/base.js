@@ -19,7 +19,7 @@
 	 */
 	$.fn.expireReplace = function(ts, newText){
 		if (Object.prototype.toString.call(ts) !== '[object Date]') {
-			ts = Date.parse(ts);
+			ts = new Date(Date.parse(ts));
 		}
 		if ( ! (ts instanceof Date) || isNaN(ts.getTime())) {
 			log('Supplied expireReplace timestamp is an invalid date.');
