@@ -133,6 +133,62 @@
 			width: 98%
 		}
 		
+		.cm-album-purchase {
+			margin: 10px 0;
+			
+			.cm-orderbutton {
+				background: #888;
+				border-radius: 3px;
+				color: #fff;
+				float: left;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1;
+				margin: 0 5px 0 0;
+				padding: 12px;
+				text-decoration: none;
+				text-transform: uppercase;
+				
+				@media (max-width: $breakpoint) {
+					font-size: 4vw;
+				}
+				
+				&:hover { background: #aaa; }
+				
+				&.cm-right {
+					float: right;
+					margin: 0 0 0 5px;
+				}
+			}
+			
+			.cm-album-name {
+				color: #666;
+				font-size: 20.6px;
+				font-weight: 300;
+				line-height: 1;
+				padding-top: 2px;
+				text-transform: uppercase;
+				
+				@media (max-width: $breakpoint) {
+					font-size: 4vw;
+				}
+				
+				strong { color: #333; }
+			}
+			
+			.cm-album-availability {
+				color: #333;
+				font-size: 16.05px;
+				font-weight: bold;
+				line-height: 1;
+				text-transform: uppercase;
+				
+				@media (max-width: $breakpoint) {
+					font-size: 2.75vw;
+				}
+			}
+		}
+
 		.cm-albumname {
 			font-size: 120%;
 			font-weight: bold;
