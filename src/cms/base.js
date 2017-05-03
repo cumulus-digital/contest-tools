@@ -11,7 +11,7 @@
 					checkOrigin: false,
 					heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
 					tolerance: 5
-				}, iframe)
+				}, iframe[i])
 		);
 	}
 
