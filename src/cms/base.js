@@ -1,14 +1,19 @@
 // @codekit-prepend 'iframeResizer.js';
 
 (function(window, undefined){
-	var iframe = window.document.querySelector('.entry-content iframe'),
+	var iframe = window.document.querySelectorAll('.entry-content iframe'),
 		isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
-	window.contestIframeResizerObject = window.iFrameResize({
-		log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
-		checkOrigin: false,
-		heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
-		tolerance: 5
-	}, iframe);
+	window.contestIframeResizerObject = [];
+	for (var i = 0; i < iframe.length; i++) {
+		window.contestIframeResizerObject.push(
+			window.iFrameResize({
+					log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
+					checkOrigin: false,
+					heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
+					tolerance: 5
+				}, iframe)
+		);
+	}
 
 	// Hide AddThis for contests
 	function hideAddThis() {
