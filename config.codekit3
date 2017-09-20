@@ -437,6 +437,22 @@
 		"oAP": "\/dist\/cms\/fullwidth.css.map",
 		"oF": 0
 		},
+	"\/dist\/cms\/iframeResizer.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/dist\/cms\/iframeResizer.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/dist\/cms\/iframeResizer.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/dist\/cms\/iframeResizer.js.map",
+		"oF": 0
+		},
 	"\/dist\/cms\/t2w.css": {
 		"aP": 0,
 		"bl": 0,

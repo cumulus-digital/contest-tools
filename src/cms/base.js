@@ -65,7 +65,7 @@
 
 	// Set up iFrameResizer for any iframes in our post
 	$(function(){
-		var iframe = $('.CMLS_CCC .entry-content iframe'),
+		var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
 			isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
 		if (iframe.length) {
 			
@@ -74,7 +74,7 @@
 			$('<script src="' + src + '"></sc' + 'ript>').appendTo('body');
 
 			window.contestIframeResizerObject = [];
-			iframe.each(function() {
+			$(iframe.each(function() {
 				log('Attaching iFrameResizer to post iframe.');
 				window.contestIframeResizerObject.push(
 					window.contestIframeResizerObject.push(
@@ -86,7 +86,7 @@
 							}, this)
 					)
 				);
-			});
+			}));
 		}
 	});
 
