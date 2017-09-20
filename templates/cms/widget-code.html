@@ -1,28 +1,18 @@
-<script type="text/javascript" id="CMLS_CONTEST_ID">
-/**
- * Add an identifier to the parent column so we can work with JUST our content.
- */
-(function($, window, undefined){
-	var tag = $('#CMLS_CONTEST_ID');
-	if (tag) {
-		tag.parentsUntil('.wrapper-content','.column,.row,.block-type-content').addClass('CMLS_CONTEST_CONTENT');
-	}
-}(jQuery, window));
-</script>
+<script
+	src="CHANGEME/dist/cms/base.js"
+	id="CMLS_CONTEST"
+
+	data-google-analytics-id="UA-########-##"
+></script>
 
 <!--
-	Include either base OR fullwidth styles, not both!
+	Include the appropriate stylesheet:
+	base.css - For normal content posts with right column
+	fullwidth.css - For taking the full width content area
+	t2w.css - Full width with extra layout style helpers
 -->
 <!--
 <link href="CHANGEME/dist/cms/base.css" rel="stylesheet" type="text/css">
 -->
-<!--
-<link href="CHANGEME/dist/cms/fullwidth.css" rel="stylesheet" type="text/css">
--->
-<script src="CHANGEME/dist/cms/base.js" type="text/javascript"></script>
-<script type="text/javascript">
-	// Install Google Analytics
-	installGoogleAnalytics('UA-########-##');
-</script>
 
 <!-- ADD YOUR CONTENT BELOW -->

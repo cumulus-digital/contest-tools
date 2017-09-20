@@ -1,92 +1,72 @@
-<script type="text/javascript" id="CMLS_CONTEST_ID">
-/**
- * Add an identifier to the parent column so we can work with JUST our content.
- */
-(function($, window, undefined){
-	var tag = $('#CMLS_CONTEST_ID');
-	if (tag) {
-		tag.parentsUntil('.wrapper-content','.column,.row,.block-type-content').addClass('CMLS_CONTEST_CONTENT');
-	}
-}(jQuery, window));
-</script>
+<script
+	src="CHANGEME/dist/cms/base.js"
+	id="CMLS_CONTEST"
 
-<!-- Installs common styles -->
-<link href="CHANGEME/dist/cms/fullwidth.css" rel="stylesheet" type="text/css">
+	data-google-analytics-id="UA-########-##"
+></script>
 
-<!-- Installs common script -->
-<script src="CHANGEME/dist/text-to-win/base.js" type="text/javascript"></script>
-<script type="text/javascript">
-	// Install Google Analytics
-	installGoogleAnalytics('UA-########-##');
-</script>
+<link href="CHANGEME/dist/cms/t2w.css" rel="stylesheet" type="text/css">
 
+<!-- Page fonts -->
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
+
+<!-- Page styles -->
 <style>
-
-/* Main contest wrapper */
-.t2w-main {
-	background: #eee;
-	color: #000;
-}
-
-/* Contest container, centered in wrapper */
-.t2w-container {
-	background: #fff;
-	box-shadow: 0 0 100px rgba(0,0,0,0.3);
-	max-width: 900px;
-}
-
-/* Contest details */
-.t2w-details {
-	color: #000;
-}
-
-/* Bands In Town header */
-.t2w-bit-header {
-	background: #999;
-	color: #fff;
-}
-
-/* Album order button */
-.t2w-album .t2w-album-purchase .t2w-orderbutton {
-	background: #888 !important;
-	color: #fff !important;
-}
-	.t2w-album .t2w-album-purchase .t2w-orderbutton:hover {
-		background: #AAA !important;
+	.t2w-main {
+		background: #000;
 	}
 
-/* Album name */
-.t2w-album .t2w-album-purchase .t2w-album-name {
-	color: #666 !important;
-}
-	.t2w-album .t2w-album-purchase .t2w-album-name strong {
+	.t2w-container {
+		background: #fff;
+	}
+
+	.t2w-details {
+		color: #000;
+		font-family: 'Oswald', sans-serif !important;
+	}
+
+	/* BandsInTown header */
+	.t2w-bit-header {
+		background: #999;
+		color: #fff;
+	}
+
+	/* Album order button */
+	.t2w-orderbutton {
+		background: #888 !important;
+		color: #fff !important;
+	}
+		.t2w-orderbutton:hover {
+			background: #aaa !important;
+		}
+
+	/* Album name */
+	.t2w-album-name {
+		color: #666 !important;
+	}
+		.t2w-album-name strong {
+			color: #333 !important;
+		}
+
+	.t2w-album-availability {
 		color: #333 !important;
 	}
-
-/* Album availability */
-.t2w-album .t2w-album-purchase .t2w-album-availability {
-	color: #333 !important;
-}
 </style>
 
-<!-- CONTEST CONTENT -->
+<!-- Contest content -->
 <div class="t2w-main">
 
 	<div class="t2w-container">
 
 		<div class="t2w-header">
-			<!-- IPHONE IMAGE -->
-			<img src="" class="t2w-iphone t2w-right">
-
-			<!-- HEADER IMAGE -->
 			<img src="" width="100%" alt="CHANGEME">
 		</div>
 
 		<div class="t2w-video">
 			<div class="embed-container">
-				<!-- REPLACE CHANGEME WITH YOUTUBE VIDEO ID -->
+
 				<iframe src="https://www.youtube-nocookie.com/embed/CHANGEME?rel=0&amp;controls=1&amp;showinfo=0&amp;modestbranding=1&amp;playsinline=1&amp;autohide=1" frameborder="0" allowfullscreen="" class="fitvidsignore"></iframe>
+
 			</div>
 		</div>
 
@@ -95,19 +75,22 @@
 			<div class="t2w-row">
 
 				<div class="t2w-col">
+
 					<div class="t2w-details">
 						Listen to this station all week for your chance to win a trip to...
 
 						<a href="" target="_blank" class="t2w-rules">Official Rules</a>
 					</div>
 
-					<div class="t2w-bit-header">Can't Wait? See them LIVE near you!</div>
+					<div class="t2w-bit-header">Can't wait? See them LIVE near you!</div>
+
 					<!-- BANDS IN TOWN WIDGET -->
 					<a href="http://bandsintown.com/CHANGEME" class="bit-widget-initializer" data-artist="CHANGEME" data-text-color="#CHANGEME" data-link-color="#CHANGEME" data-separator-color="#CHANGEME" data-share-links="false" data-display-limit="CHANGEME">CHANGEME Tour Dates</a>
+
 				</div>
 
-				<div class="t2w-col t2w-right">
-					
+				<div class="t2w-col">
+
 					<div class="t2w-album">
 						<a href="" target="_blank"><img src="" alt="" class="t2w-albumcover"></a>
 
@@ -119,13 +102,29 @@
 					</div>
 
 					<div class="t2w-twitter-desktop">
-						<a class="twitter-timeline" data-screen-name="CHANGEME" data-theme="light" data-dnt="true" href="https://twitter.com/CHANGEME" data-widget-id="555779576849502208" data-chrome="" height="501px" width="99.9%" data-link-color="#CHANGEME">Tweets by @CHANGEME</a>
+						<a class="twitter-timeline"
+							data-screen-name="CHANGEME"
+							href="https://twitter.com/CHANGEME"
+							data-theme="light"
+							data-link-color="#CHANGEME"
+							data-dnt="true" data-widget-id="555779576849502208" data-chrome="" height="501px" width="99.9%">
+							Tweets by @CHANGEME
+						</a>
 					</div>
 					<div class="t2w-twitter-mobile">
-						<a class="twitter-timeline" data-screen-name="CHANGEME" data-theme="light" data-dnt="true" href="https://twitter.com/CHANGEME" data-widget-id="555779576849502208" data-chrome="noborders" width="99.9%" data-link-color="#CHANGEME" data-tweet-limit="1" >Tweets by @CHANGEME</a>
+						<a class="twitter-timeline"
+							data-screen-name="CHANGEME"
+							href="https://twitter.com/CHANGEME"
+							data-theme="light"
+							data-link-color="#CHANGEME"
+							data-dnt="true" data-widget-id="555779576849502208" data-chrome="" height="501px" width="99.9%" data-tweet-limit="1">
+							Tweets by @CHANGEME
+						</a>
 					</div>
 
-					<div class="fb-page" data-href="https://www.facebook.com/CHANGEME" data-width="390" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
+					<div 
+						data-href="https://www.facebook.com/CHANGEME"
+						class="fb-page" data-width="390" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
 
 				</div>
 
@@ -140,9 +139,7 @@
 
 </div>
 
-<script type="text/javascript" src="http://widget.bandsintown.com/javascripts/bit_widget.js" async defer></script>
-
-<!-- Contest-specific scripting -->
+<!-- Contest-specific scripting
 <script type="text/javascript">
 (function($, window, undefined){
 
@@ -153,3 +150,4 @@
 
 }(jQuery, window));
 </script>
+-->

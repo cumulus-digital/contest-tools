@@ -7,7 +7,7 @@
 		"uuidString": "6A73FFD4-B6B7-48D8-8C50-80FED8A430C2"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25900",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -45,6 +45,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/index.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/index.js",
@@ -60,6 +61,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/js\/ie8.polyfils.min.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/ie8.polyfils.min.js",
@@ -69,6 +71,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.js",
@@ -90,6 +93,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.min.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.min.js",
@@ -99,6 +103,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/iframeResizer.js",
@@ -114,6 +119,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.min.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/iframeResizer.min.js",
@@ -123,6 +129,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/js\/index.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/index.js",
@@ -132,6 +139,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/karma.conf.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/karma.conf.js",
@@ -147,6 +155,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/_initSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/_initSpec.js",
@@ -156,6 +165,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/anchorSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/anchorSpec.js",
@@ -165,6 +175,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/childSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/childSpec.js",
@@ -174,6 +185,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/closeSpecSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/closeSpecSpec.js",
@@ -183,6 +195,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/getPageInfoSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/getPageInfoSpec.js",
@@ -192,6 +205,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/initCssSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/initCssSpec.js",
@@ -201,6 +215,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/initDomSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/initDomSpec.js",
@@ -210,6 +225,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/initDoubleCallSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/initDoubleCallSpec.js",
@@ -219,6 +235,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/initErrorSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/initErrorSpec.js",
@@ -228,6 +245,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/initJQuerySpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/initJQuerySpec.js",
@@ -237,6 +255,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/initUndefinedDomSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/initUndefinedDomSpec.js",
@@ -264,6 +283,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/lib\/common.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/lib\/common.js",
@@ -273,6 +293,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/parentSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/parentSpec.js",
@@ -310,6 +331,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/scrollSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/scrollSpec.js",
@@ -319,6 +341,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/spec\/sendMessageSpec.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/sendMessageSpec.js",
@@ -328,6 +351,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/src\/ie8.polyfils.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/src\/ie8.polyfils.js",
@@ -337,6 +361,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/src\/iframeResizer.contentWindow.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/src\/iframeResizer.contentWindow.js",
@@ -346,6 +371,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/src\/iframeResizer.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/src\/iframeResizer.js",
@@ -355,6 +381,7 @@
 		},
 	"\/bower_components\/iframe-resizer\/test-main.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/test-main.js",
@@ -380,6 +407,7 @@
 		},
 	"\/dist\/cms\/base.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/dist\/cms\/base.js",
@@ -409,6 +437,22 @@
 		"oAP": "\/dist\/cms\/fullwidth.css.map",
 		"oF": 0
 		},
+	"\/dist\/cms\/t2w.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/dist\/cms\/t2w-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/dist\/cms\/t2w.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/dist\/cms\/t2w.css.map",
+		"oF": 0
+		},
 	"\/dist\/contest\/base.css": {
 		"aP": 0,
 		"bl": 0,
@@ -427,6 +471,7 @@
 		},
 	"\/dist\/contest\/base.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/dist\/contest\/base.js",
@@ -458,6 +503,7 @@
 		},
 	"\/dist\/text-to-win\/base.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/dist\/text-to-win\/base.js",
@@ -491,6 +537,7 @@
 		},
 	"\/src\/cms\/base.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/dist\/cms\/base.js",
@@ -526,12 +573,26 @@
 		},
 	"\/src\/cms\/iframeResizer.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/dist\/cms\/iframeResizer.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
+		},
+	"\/src\/cms\/t2w.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 1,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/dist\/cms\/t2w.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 1
 		},
 	"\/src\/contest\/bandsintown.styl": {
 		"aP": 1,
@@ -548,6 +609,7 @@
 		},
 	"\/src\/contest\/base.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/dist\/contest\/base.js",
@@ -596,6 +658,7 @@
 		},
 	"\/src\/text-to-win\/base.js": {
 		"ft": 64,
+		"ma": 1,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/dist\/text-to-win\/base.js",
@@ -1059,6 +1122,10 @@
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
+			},
 		"array-bracket-spacing": {
 			"active": 0,
 			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
@@ -1066,6 +1133,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -1163,6 +1234,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -1182,6 +1257,10 @@
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -1310,6 +1389,10 @@
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
+			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-caller": {
 			"active": 0,
@@ -1855,6 +1938,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -1923,6 +2010,10 @@
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
 			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
 		"sort-imports": {
 			"active": 0,
 			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
@@ -1962,6 +2053,10 @@
 		"strict": {
 			"active": 0,
 			"optionString": "'safe'"
+			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
 			},
 		"symbol-description": {
 			"active": 0,
@@ -2591,9 +2686,11 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 3,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {

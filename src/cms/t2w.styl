@@ -1,0 +1,191 @@
+@import 'nib'
+@require 'fullwidth.styl'
+
+$breakpoint = 720px;
+
+.t2w-main.t2w-main {
+	* {
+		box-sizing: border-box;
+	}
+	p,a {
+		font-family: inherit;
+	}
+}
+
+.t2w-container {
+	box-shadow: 0 0 100px rgba(0,0,0,0.3);
+	margin: 0 auto;
+	max-width: 900px;
+	padding-bottom: 5px;
+	position: relative;
+	width: 100%;
+}
+
+.t2w-header {
+	height: auto;
+	overflow: visible;
+	position: relative;
+	z-index: 3;
+}
+
+.t2w-video {
+	position: relative;
+	z-index: 2;
+}
+
+.t2w-body {
+	padding: 20px;
+}
+
+.t2w-row {
+	overflow: hidden;
+	padding: 0 0 10px;
+	width: 100%;
+
+	.t2w-col {
+		display: inline-block;
+		padding: 0 3.333333% 0 0;
+		vertical-align: top;
+		max-width: 50%;
+		
+		&:last-of-type {
+			padding-right: 0;
+		}
+		
+		@media (max-width: $breakpoint) {
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+
+	&.with_cube {
+		.t2w-col {
+			max-width: calc(100% - 300px - 3.333333%);
+			
+			&.with_cube {
+				min-width: 300px;
+				max-width: 300px;
+				
+				@media (max-width: $breakpoint) {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.t2w-details {
+	font-size: 21px !important;
+	line-height: 1.5 !important;
+	padding-bottom: 35px;
+}
+.t2w-rules {
+	clear: both;
+	color: inherit !important;
+	float: right;
+	font-family: sans-serif !important;
+	font-size: 10px !important;
+	margin-top: 20px;
+	opacity: 0.6;
+	
+	&:hover {
+		opacity: 1;
+		text-decoration: underline !important;
+	}
+}
+
+.t2w-bit-header {
+	background: #999;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 18px !important;
+	line-height: 1 !important;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+td.bit-rsvp { display: none; }
+
+.t2w-album {
+	line-height: 1 !important;
+	margin-bottom: 5px;
+}
+	.t2w-albumcover {
+		width: 100%;
+	}
+	
+	.t2w-album-purchase {
+		margin: 10px 0;
+	}
+	.t2w-orderbutton {
+		background: #888;
+		border-radius: 3px;
+		color: #fff;
+		float: left;
+		font-size: 16px !important;
+		font-weight: 500 !important;
+		line-height: 1 !important;
+		margin: 0 5px 0 0;
+		padding: 12px;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		
+		@media (max-width: $breakpoint) {
+			font-size: 4vw !important;
+		}
+		
+		&:hover {
+			background: #AAA;
+		}
+	}
+	.t2w-album-name {
+		color: #666;
+		font-size: 20.6px !important;
+		font-weight: 300 !important;
+		line-height: 1 !important;
+		padding-top: 2px !important;
+		text-transform: uppercase !important;
+		
+		@media (max-width: $breakpoint) {
+			font-size: 4vw !important;
+		}
+		
+		strong {
+			color: #333;
+		}
+	}
+	.t2w-album-availability {
+		color: #333;
+		font-size: 16.05px !important;
+		font-weight: bold !important;
+		line-height: 1 !important;
+		text-transform: uppercase !important;
+		
+		@media (max-width: $breakpoint) {
+			font-size: 4vw !important;
+		}
+	}
+
+.t2w-main .twitter-timeline { width: 99.5 !important; }
+.t2w-twitter-mobile { display: none; }
+@media (max-width: $breakpoint) {
+	.t2w-twitter-mobile { display: block; }
+	.t2w-twitter-desktop { display: none; }
+}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+
+	> * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
