@@ -27,6 +27,29 @@
 	var gaID = tag.attr('data-google-analytics-id');
 	if (gaID) {
 		log('Installing Google Analytics', gaID);
+		/**
+		 * Installs GA with a given ID
+		 * @param  {string} id GA property ID
+		 * @return {void}
+		 */
+		window._CMLS.installGoogleAnalytics = function installGoogleAnalytics(id) {
+			if ( ! id) {
+				return;
+			}
+			/* jshint ignore:start */
+			/*jsl:ignore* /
+			/*ignore jslint start*/
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', id, 'auto', {'name': 'contestTracker'});
+			ga('contestTracker.send', 'pageview');
+			/*ignore jslint end*/
+			/*jsl:end */
+			/* jshint ignore:end */
+		};
 		window._CMLS.installGoogleAnalytics(gaID);
 	}
 
@@ -117,24 +140,6 @@
 	/*jsl:ignore* /
 	/*ignore jslint start*/
 
-	/**
-	 * Installs GA with a given ID
-	 * @param  {string} id GA property ID
-	 * @return {void}
-	 */
-	window._CMLS.installGoogleAnalytics = function installGoogleAnalytics(id) {
-		if ( ! id) {
-			return;
-		}
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', id, 'auto', {'name': 'contestTracker'});
-		ga('contestTracker.send', 'pageview');
-	}
-
 	// TWITTER TIMELINE WIDGET
 	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
@@ -149,5 +154,5 @@
 
 	/*ignore jslint end*/
 	/*jsl:end */
-	/* jshint ignore:end */	
+	/* jshint ignore:end */
 }(jQuery, window.self));
