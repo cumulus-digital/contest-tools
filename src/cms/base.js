@@ -73,6 +73,7 @@
 			$('<script src="' + src + '" onload="resizeContestIframe"></sc' + 'ript>').appendTo('body');
 
 			window.resizeContestIframe = function() {
+				log('resizeContestIframe called');
 				window.contestIframeResizerObject = [];
 				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
 					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
