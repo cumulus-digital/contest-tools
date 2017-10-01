@@ -68,11 +68,12 @@
 		var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])');
 		if (iframe.length) {
 			
-			window.resizeContestIframe = function() {
-				window.contestIframeResizerObject = [];
-				var iframe = jQuery('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
+			// We've got iframes, so let's include iframeResizer!
+			var src = tag.attr('src').replace('/base.js', '/iframeResizer.js');
+			$.getScript(src, function() {
+				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
 					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
-				jQuery(iframe.each(function() {
+				$(iframe.each(function() {
 					log('Attaching iFrameResizer to post iframe.');
 					window.contestIframeResizerObject.push(
 						window.contestIframeResizerObject.push(
@@ -85,11 +86,7 @@
 						)
 					);
 				}));
-			};
-			
-			// We've got iframes, so let's include iframeResizer!
-			var src = tag.attr('src').replace('/base.js', '/iframeResizer.js');
-			$('<script src="' + src + '" onload="resizeContestIframe()"></sc' + 'ript>').appendTo('body');
+			});
 
 		}
 	});
