@@ -73,6 +73,7 @@
 			$.getScript(src, function() {
 				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
 					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
+				window.contestIframeResizerObject = [];
 				$(iframe.each(function() {
 					log('Attaching iFrameResizer to post iframe.');
 					window.contestIframeResizerObject.push(
