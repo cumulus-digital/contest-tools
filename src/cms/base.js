@@ -70,7 +70,7 @@
 			
 			// We've got iframes, so let's include iframeResizer!
 			var src = tag.attr('src').replace('/base.js', '/iframeResizer.js');
-			$('<script src="' + src + '" onload="resizeContestIframe()"></sc' + 'ript>').appendTo('body');
+			$('<script src="' + src + '" onload="resizeContestIframe"></sc' + 'ript>').appendTo('body');
 
 			window.resizeContestIframe = function() {
 				window.contestIframeResizerObject = [];
