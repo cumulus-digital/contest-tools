@@ -65,28 +65,31 @@
 
 	// Set up iFrameResizer for any iframes in our post
 	$(function(){
-		var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
-			isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
+		var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])');
 		if (iframe.length) {
 			
 			// We've got iframes, so let's include iframeResizer!
 			var src = tag.attr('src').replace('/base.js', '/iframeResizer.js');
-			$('<script src="' + src + '"></sc' + 'ript>').appendTo('body');
+			$('<script src="' + src + '" onload="resizeContestIframe()"></sc' + 'ript>').appendTo('body');
 
-			window.contestIframeResizerObject = [];
-			$(iframe.each(function() {
-				log('Attaching iFrameResizer to post iframe.');
-				window.contestIframeResizerObject.push(
+			window.resizeContestIframe = function() {
+				window.contestIframeResizerObject = [];
+				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
+					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
+				$(iframe.each(function() {
+					log('Attaching iFrameResizer to post iframe.');
 					window.contestIframeResizerObject.push(
-						window.iFrameResize({
-								log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
-								checkOrigin: false,
-								heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
-								tolerance: 5
-							}, this)
-					)
-				);
-			}));
+						window.contestIframeResizerObject.push(
+							window.iFrameResize({
+									log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
+									checkOrigin: false,
+									heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
+									tolerance: 5
+								}, this)
+						)
+					);
+				}));
+			};
 		}
 	});
 
