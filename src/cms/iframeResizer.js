@@ -985,4 +985,4 @@
 
 	window.iFrameResize = window.iFrameResize || factory();
 
-})(window || {});
+})(window.self || {});
