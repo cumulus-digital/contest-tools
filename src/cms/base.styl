@@ -1,13 +1,9 @@
-// Remove extra space under contest iframe
-iframe[src*="digitalivy.com"] {
-	display: inherit;
-}
-
 .themify_builder_turn_on {
 	display: none !important;
 }
 
-body .wrapper-content .CMLS_CCC {
+body .wrapper-content {
+	
 	#comments,
 	article > header,
 	article > footer,
@@ -17,7 +13,18 @@ body .wrapper-content .CMLS_CCC {
 	.hideme {
 		display: none !important;
 	}
-	.entry-content {
-		margin-top: 0 !important;
+	
+	/.CMLS_CCC {
+
+		display: block !important;
+
+		.entry-content {
+			margin-top: 0 !important;
+		}
+		
+		// Remove extra space under contest iframe
+		iframe[src*="digitalivy.com"] {
+			display: inherit;
+		}
 	}
 }
