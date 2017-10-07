@@ -8,7 +8,7 @@
  * Contributor: Reed Dadoune - reed@dadoune.com
  */
 
-// v3.5.14
+// v3.5.14 ALTERED to support scrolling inside TuneGenie page_frame
 /* jshint ignore:start */
 
 ;(function(undefined) {
@@ -375,8 +375,9 @@
 
 			log(iframeId,'Reposition requested from iFrame (offset x:'+offset.x+' y:'+offset.y+')');
 
-			if(window.top !== window.self){
-				scrollParent();
+			// ALTERED TO SUPPORT TG page_frame
+			if(window.top !== window.self && window.self.name !== 'page_frame'){
+			 	scrollParent();
 			} else {
 				reposition();
 			}
