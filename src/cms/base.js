@@ -88,7 +88,10 @@
 					);
 				}));
 			};
-			$('<script src="' + src + '" onload="setupIframeResizer"></scr'+'ipt>').appendTo('body');
+			var scr = window.document.createElement('script');
+			scr.onload = window.setupIframeResizer;
+			scr.src = src;
+			$(scr).appendTo('body');
 
 		}
 	});
