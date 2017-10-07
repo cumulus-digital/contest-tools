@@ -81,6 +81,7 @@
 							window.iFrameResize({
 									log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
 									checkOrigin: false,
+									enablePublicMethods : true,
 									heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
 									tolerance: 5
 								}, this)
