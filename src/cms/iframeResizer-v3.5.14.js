@@ -11,7 +11,7 @@
 // v3.5.14
 /* jshint ignore:start */
 
-;(function(window, undefined) {
+;(function(undefined) {
 	'use strict';
 
 	if(typeof window === 'undefined') return; // don't run for server side render
@@ -1039,4 +1039,4 @@
 		window.iFrameResize = window.iFrameResize || factory();
 	}
 
-})(window.self);
+})();
