@@ -90,7 +90,7 @@
 				}));
 			};
 			scr.src = src;
-			$(scr).appendTo('body');
+			window.document.body.appendChild(scr);
 
 		}
 	});
