@@ -69,7 +69,7 @@
 		if (iframe.length) {
 			
 			// We've got iframes, so let's include iframeResizer!
-			var src = tag.attr('src').replace('/base.js', '/iframeResizer.js');
+			var src = tag.attr('src').replace('/base.js', '/iframeResizer-v3.5.14.js');
 			$.getScript(src, function() {
 				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
 					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
