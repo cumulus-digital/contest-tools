@@ -437,6 +437,22 @@
 		"oAP": "\/dist\/cms\/fullwidth.css.map",
 		"oF": 0
 		},
+	"\/dist\/cms\/iframeResizer-v3.5.14.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/dist\/cms\/iframeResizer-v3.5.14.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/dist\/cms\/iframeResizer-v3.5.14.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/dist\/cms\/iframeResizer-v3.5.14.js.map",
+		"oF": 0
+		},
 	"\/dist\/cms\/iframeResizer.js": {
 		"ft": 64,
 		"ma": 1,
@@ -586,6 +602,16 @@
 		"oF": 1,
 		"oS": 1,
 		"rrU": 1
+		},
+	"\/src\/cms\/iframeResizer-v3.5.14.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/dist\/cms\/iframeResizer-v3.5.14.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/src\/cms\/iframeResizer.js": {
 		"ft": 64,
