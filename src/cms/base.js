@@ -70,7 +70,8 @@
 			
 			// We've got iframes, so let's include iframeResizer!
 			var src = tag.attr('src').replace('/base.js', '/iframeResizer-v3.5.14.js');
-			window.setupIframeResizer = function(){
+			var scr = window.document.createElement('script');
+			scr.onload = function(){
 				log('Setting up iframe-resizer library.');
 				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
 					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
@@ -88,8 +89,6 @@
 					);
 				}));
 			};
-			var scr = window.document.createElement('script');
-			scr.onload = window.setupIframeResizer;
 			scr.src = src;
 			$(scr).appendTo('body');
 
