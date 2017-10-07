@@ -70,25 +70,25 @@
 			
 			// We've got iframes, so let's include iframeResizer!
 			var src = tag.attr('src').replace('/base.js', '/iframeResizer-v3.5.14.js');
-			$.getScript(src, function() {
+			window.setupIframeResizer = function(){
+				log('Setting up iframe-resizer library.');
 				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
 					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
 				window.contestIframeResizerObject = [];
 				$(iframe.each(function() {
-					log('Attaching iFrameResizer to post iframe.');
+					log('Attaching iFrameResizer to post iframe.', this);
 					window.contestIframeResizerObject.push(
-						window.contestIframeResizerObject.push(
-							window.iFrameResize({
-									log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
-									checkOrigin: false,
-									enablePublicMethods : true,
-									heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
-									tolerance: 5
-								}, this)
-						)
+						window.iFrameResize({
+								log: window._CMLS && window._CMLS.debug ? window._CMLS.debug : false,
+								checkOrigin: false,
+								enablePublicMethods : true,
+								heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
+								tolerance: 5
+							}, this)
 					);
 				}));
-			});
+			};
+			$('<script src="' + src + '" onload="setupIframeResizer"></scr'+'ipt>').appendTo('body');
 
 		}
 	});
