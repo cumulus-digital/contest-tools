@@ -7,9 +7,10 @@
 		"uuidString": "6A73FFD4-B6B7-48D8-8C50-80FED8A430C2"
 		}
 	],
-"creatorBuild": "25900",
+"creatorBuild": "26097",
 "files": {
 	"\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/.gitignore",
@@ -24,12 +25,14 @@
 		"oS": 1
 		},
 	"\/bower_components\/iframe-resizer\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/.gitignore",
 		"oF": 0
 		},
 	"\/bower_components\/iframe-resizer\/.travis.yml": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/.travis.yml",
@@ -54,6 +57,7 @@
 		"tS": 0
 		},
 	"\/bower_components\/iframe-resizer\/js\/ie8.polyfils.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/ie8.polyfils.map",
@@ -80,12 +84,14 @@
 		"tS": 0
 		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.js.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.js.map",
 		"oF": 0
 		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/iframeResizer.contentWindow.map",
@@ -112,6 +118,7 @@
 		"tS": 0
 		},
 	"\/bower_components\/iframe-resizer\/js\/iframeResizer.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/js\/iframeResizer.map",
@@ -148,6 +155,7 @@
 		"tS": 0
 		},
 	"\/bower_components\/iframe-resizer\/LICENSE": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/LICENSE",
@@ -264,18 +272,21 @@
 		"tS": 0
 		},
 	"\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe.html",
 		"oF": 0
 		},
 	"\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe600.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe600.html",
 		"oF": 0
 		},
 	"\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe600WithId.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/javascripts\/fixtures\/iframe600WithId.html",
@@ -312,18 +323,21 @@
 		"q": 100
 		},
 	"\/bower_components\/iframe-resizer\/spec\/resources\/frame.content.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/resources\/frame.content.html",
 		"oF": 0
 		},
 	"\/bower_components\/iframe-resizer\/spec\/resources\/frame.lateload.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/resources\/frame.lateload.html",
 		"oF": 0
 		},
 	"\/bower_components\/iframe-resizer\/spec\/resources\/frame.nested.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/resources\/frame.nested.html",
@@ -400,6 +414,7 @@
 		"oS": 0
 		},
 	"\/dist\/cms\/base.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/cms\/base.css.map",
@@ -416,6 +431,7 @@
 		"tS": 0
 		},
 	"\/dist\/cms\/base.js.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/cms\/base.js.map",
@@ -432,6 +448,7 @@
 		"oS": 0
 		},
 	"\/dist\/cms\/fullwidth.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/cms\/fullwidth.css.map",
@@ -448,6 +465,7 @@
 		"tS": 0
 		},
 	"\/dist\/cms\/iframeResizer-v3.5.14.js.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/cms\/iframeResizer-v3.5.14.js.map",
@@ -464,6 +482,7 @@
 		"tS": 0
 		},
 	"\/dist\/cms\/iframeResizer.js.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/cms\/iframeResizer.js.map",
@@ -480,6 +499,7 @@
 		"oS": 3
 		},
 	"\/dist\/cms\/t2w.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/cms\/t2w.css.map",
@@ -496,6 +516,7 @@
 		"oS": 0
 		},
 	"\/dist\/contest\/base.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/contest\/base.css.map",
@@ -512,6 +533,7 @@
 		"tS": 0
 		},
 	"\/dist\/contest\/base.js.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/contest\/base.js.map",
@@ -528,6 +550,7 @@
 		"oS": 0
 		},
 	"\/dist\/text-to-win\/base.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/text-to-win\/base.css.map",
@@ -544,16 +567,17 @@
 		"tS": 0
 		},
 	"\/dist\/text-to-win\/base.js.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/text-to-win\/base.js.map",
 		"oF": 0
 		},
 	"\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -722,30 +746,35 @@
 		"rrU": 1
 		},
 	"\/templates\/cms\/widget-code.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/cms\/widget-code.html",
 		"oF": 0
 		},
 	"\/templates\/contest\/email.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/contest\/email.html",
 		"oF": 0
 		},
 	"\/templates\/contest\/header-code.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/contest\/header-code.html",
 		"oF": 0
 		},
 	"\/templates\/contest\/page-code.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/contest\/page-code.html",
 		"oF": 0
 		},
 	"\/templates\/text-to-win\/t2w-page.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/text-to-win\/t2w-page.html",
@@ -1296,6 +1325,10 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
@@ -1360,9 +1393,9 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
 		"max-depth": {
 			"active": 0,
@@ -1392,6 +1425,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -1401,14 +1438,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -2512,7 +2541,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 2,
@@ -2545,6 +2575,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -2586,7 +2617,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -2618,13 +2650,13 @@
 		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -2633,7 +2665,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -2653,7 +2686,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -2681,7 +2715,8 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,

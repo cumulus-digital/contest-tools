@@ -114,7 +114,7 @@
 	// Set up Bands In Town widget if placement exists
 	$(function(){
 		if ($('.bit-widget-initializer').length) {
-			$('<script src="http://widget.bandsintown.com/javascripts/bit_widget.js"></scr' + 'ipt>')
+			$('<script src="https://widget.bandsintown.com/main.min.js"></scr' + 'ipt>')
 				.appendTo('body');
 		}
 	});
