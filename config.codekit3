@@ -7,7 +7,7 @@
 		"uuidString": "6A73FFD4-B6B7-48D8-8C50-80FED8A430C2"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -315,6 +315,7 @@
 	"\/bower_components\/iframe-resizer\/spec\/resources\/djb.jpg": {
 		"ft": 16384,
 		"iS": 56794,
+		"jF": 0,
 		"oA": 2,
 		"oAP": "\/bower_components\/iframe-resizer\/spec\/resources\/djb.jpg",
 		"oF": 0,
@@ -789,7 +790,8 @@
 	"creationDate": 505944765,
 	"displayValue": "contest-tools",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets_purple"
+	"iconImageName": "brackets_purple",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2592,6 +2594,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

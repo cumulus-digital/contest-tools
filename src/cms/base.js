@@ -92,6 +92,8 @@
 			scr.src = src;
 			window.document.body.appendChild(scr);
 
+		} else {
+			log('Could not find iframe.');
 		}
 	});
 
