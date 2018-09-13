@@ -1,0 +1,30 @@
+@require 'base.styl'
+
+body .wrapper-content {
+	&,
+	.grid-container,
+	.CMLS_CCC,
+	.CMLS_CCC > div,
+	.CMLS_CCC article,
+	.entry-content,
+	.themify_builder_row {
+		border: 0 !important;
+		margin: 0 !important;
+		max-width: 100% !important;
+		padding: 0 !important;
+	}
+
+	.column,
+	.row,
+	.column > * {
+		display: none;
+	}
+	/.CMLS_CCC {
+		display: block !important;
+
+		iframe[width="100%"] {
+			width: 0;
+			min-width: 100%;
+		}
+	}
+}
