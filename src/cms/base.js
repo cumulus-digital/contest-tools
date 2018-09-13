@@ -65,9 +65,9 @@
 
 	// Set up iFrameResizer for any iframes in our post
 	$(function(){
-		var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])');
+		var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"]):not([src*="syndredirect"]');
 		if (iframe.length) {
-			
+
 			// We've got iframes, so let's include iframeResizer!
 			var src = tag.attr('src').replace('/base.js', '/iframeResizer-v3.5.14.js');
 			var scr = window.document.createElement('script');
@@ -93,7 +93,7 @@
 			window.document.body.appendChild(scr);
 
 		} else {
-			log('Could not find iframe.');
+			log('No iframes which need resizing found.');
 		}
 	});
 
