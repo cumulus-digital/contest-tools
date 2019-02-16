@@ -65,7 +65,7 @@
 
 	// Set up iFrameResizer for any iframes in our post
 	$(function(){
-		var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"]):not([src*="syndredirect"]');
+		var iframe = $('.CMLS_CCC .entry-content iframe:not(\'[src*="facebook.com"],[src*="youtube"],[src*="synredirect"],.twitter-timeline\')');
 		if (iframe.length) {
 
 			// We've got iframes, so let's include iframeResizer!
@@ -73,7 +73,7 @@
 			var scr = window.document.createElement('script');
 			scr.onload = function(){
 				log('Setting up iframe-resizer library.');
-				var iframe = $('.CMLS_CCC .entry-content iframe:not([src*="facebook.com"]):not([class*="twitter-timeline"]):not([src*="youtube"])'),
+				var iframe = $('.CMLS_CCC .entry-content iframe:not(\'[src*="facebook.com"],[src*="youtube"],[src*="synredirect"],.twitter-timeline\')'),
 					isOldIE = (navigator.userAgent.indexOf("MSIE") !== -1);
 				window.contestIframeResizerObject = [];
 				$(iframe.each(function() {
