@@ -84,7 +84,10 @@
 								checkOrigin: false,
 								enablePublicMethods : true,
 								heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
-								tolerance: 5
+								tolerance: 5,
+								initCallback: function(ifr) {
+									$(ifr).trigger('cmls-ifr-init');
+								}
 							}, this)
 					);
 				}));
