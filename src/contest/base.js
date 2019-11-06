@@ -27,7 +27,7 @@
 		});
 
 		// Install Bands In Town widget script
-		if ($('a[href*="bandsintown.com"]').length) {
+		if ($('a[href*="bandsintown.com"],a.bit-widget-initializer').length) {
 			$.getScript('https://widget.bandsintown.com/main.min.js');
 		}
 
