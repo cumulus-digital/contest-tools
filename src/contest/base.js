@@ -1,4 +1,4 @@
-// @codekit-prepend "../../bower_components/iframe-resizer/js/iframeResizer.contentWindow.js";
+// @codekit-prepend "../../node_modules/iframe-resizer/js/iframeResizer.contentWindow.js";
 
 (function($, window, undefined) {
 
@@ -28,7 +28,7 @@
 
 		// Install Bands In Town widget script
 		if ($('a[href*="bandsintown.com"]').length) {
-			$.getScript('http://widget.bandsintown.com/javascripts/bit_widget.js');
+			$.getScript('https://widget.bandsintown.com/main.min.js');
 		}
 
 		/* jshint ignore:start */
