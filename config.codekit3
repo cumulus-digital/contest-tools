@@ -238,23 +238,6 @@
 		"oAP": "/dist/text-to-win/base.js.map",
 		"oF": 0
 		},
-	"/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "/build/node_modules",
-		"oF": 0
-		},
-	"/node_modules/iframe-resizer/js/iframeResizer.contentWindow.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/node_modules/iframe-resizer/js/iframeResizer.contentWindow.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,

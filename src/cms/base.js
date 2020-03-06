@@ -69,7 +69,8 @@
 		if (iframe.length) {
 
 			// We've got iframes, so let's include iframeResizer!
-			var src = tag.attr('src').replace('/base.js', '/iframeResizer-v3.5.14.js');
+			//var src = tag.attr('src').replace('/base.js', '/iframeResizer-v3.5.14.js');
+			var src = 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js';
 			var scr = window.document.createElement('script');
 			scr.onload = function(){
 				log('Setting up iframe-resizer library.');
