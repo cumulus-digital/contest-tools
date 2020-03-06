@@ -1,7 +1,6 @@
-@import 'nib'
-@require 'fullwidth.styl'
-
-$breakpoint = 720px;
+unless $breakpoint is defined {
+	$breakpoint = 450px;
+}
 
 .t2w-main.t2w-main {
 	* {

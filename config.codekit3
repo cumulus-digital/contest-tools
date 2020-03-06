@@ -128,6 +128,24 @@
 		"oAP": "/dist/cms/semi-fullwidth.css.map",
 		"oF": 0
 		},
+	"/dist/cms/t2w-fullwidth.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/dist/cms/t2w-fullwidth-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dist/cms/t2w-fullwidth.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/dist/cms/t2w-fullwidth.css.map",
+		"oF": 0
+		},
 	"/dist/cms/t2w.css": {
 		"aP": 0,
 		"bl": 0,
@@ -344,6 +362,19 @@
 		"oS": 1,
 		"rrU": 1
 		},
+	"/src/cms/t2w-fullwidth.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 1,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "/dist/cms/t2w-fullwidth.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 1
+		},
 	"/src/cms/t2w.styl": {
 		"aP": 1,
 		"bl": 0,
@@ -353,7 +384,7 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "/dist/cms/t2w.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 1,
 		"rrU": 1
 		},
