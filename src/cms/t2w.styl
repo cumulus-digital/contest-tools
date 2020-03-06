@@ -1,5 +1,7 @@
-unless $breakpoint is defined {
+unless $fullwidth is defined {
+	@require 'base.styl';
 	$breakpoint = 450px;
+	$maxwidth = 655px;
 }
 
 .t2w-main.t2w-main {
@@ -12,9 +14,11 @@ unless $breakpoint is defined {
 }
 
 .t2w-container {
-	box-shadow: 0 0 100px rgba(0,0,0,0.3);
+	unless $fullwidth is defined {
+		box-shadow: 0 0 100px rgba(0,0,0,0.3);
+	}
 	margin: 0 auto;
-	max-width: 900px;
+	max-width: $maxwidth;
 	padding-bottom: 5px;
 	position: relative;
 	width: 100%;
