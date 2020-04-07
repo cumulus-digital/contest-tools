@@ -75,8 +75,12 @@
 		var iframe = $('.CMLS_CCC .entry-content iframe:not(\'[src*="facebook.com"],[src*="youtube"],[src*="synredirect"],.twitter-timeline\')');
 		if (iframe.length) {
 
+			if (window.document.getElementById('iframeResizer4210')) {
+				log('Already injected iframeResizer');
+				return;
+			}
+
 			// We've got iframes, so let's include iframeResizer!
-			//var src = tag.attr('src').replace('/base.js', '/iframeResizer-v3.5.14.js');
 			var src = 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js';
 			var scr = window.document.createElement('script');
 			scr.onload = function(){
@@ -99,12 +103,15 @@
 					);
 				}));
 			};
+			scr.id = 'iframeResizer4210';
 			scr.src = src;
 			window.document.body.appendChild(scr);
 
 		} else {
 			log('No iframes which need resizing found in round ' + round);
-			setTimeout(setupIframeResizer(round + 1), 500);
+			setTimeout(function() {
+				setupIframeResizer(round + 1);
+			}, 1000);
 		}
 	}
 	$(function(){
