@@ -7,7 +7,7 @@
 		"uuidString": "6A73FFD4-B6B7-48D8-8C50-80FED8A430C2"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32001",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -238,23 +238,6 @@
 		"oAP": "/dist/text-to-win/base.js.map",
 		"oF": 0
 		},
-	"/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "/build/node_modules",
-		"oF": 0
-		},
-	"/node_modules/iframe-resizer/js/iframeResizer.contentWindow.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/node_modules/iframe-resizer/js/iframeResizer.contentWindow.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -382,9 +365,9 @@
 		"ft": 8,
 		"iC": 1,
 		"ma": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/dist/cms/t2w.css",
-		"oF": 1,
+		"oF": 0,
 		"oS": 1,
 		"rrU": 1
 		},
@@ -1121,6 +1104,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -1297,6 +1284,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -1322,6 +1313,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -1625,6 +1620,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -1828,6 +1827,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,

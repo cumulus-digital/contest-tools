@@ -64,7 +64,14 @@
 	window.parent.NO_ADDTHIS_HERE = window.NO_ADDTHIS_HERE;
 
 	// Set up iFrameResizer for any iframes in our post
-	$(function(){
+	function setupIframeResizer(round) {
+		if ( ! round) {
+			round = 1;
+		}
+		if (round > 30) {
+			log('No iframes which need resizing were found in ' + round + ' rounds.');
+			return;
+		}
 		var iframe = $('.CMLS_CCC .entry-content iframe:not(\'[src*="facebook.com"],[src*="youtube"],[src*="synredirect"],.twitter-timeline\')');
 		if (iframe.length) {
 
@@ -96,8 +103,12 @@
 			window.document.body.appendChild(scr);
 
 		} else {
-			log('No iframes which need resizing found.');
+			log('No iframes which need resizing found in round ' + round);
+			setTimeout(setupIframeResizer(round + 1), 500);
 		}
+	}
+	$(function(){
+		setupIframeResizer(1);
 	});
 
 	// If the player bar is using History.js, destroy the iframe
