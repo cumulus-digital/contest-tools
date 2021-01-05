@@ -143,7 +143,7 @@
 	});
 
 	/**
-	 * jQuery function to replace a given object's text with a new string
+	 * jQuery function to replace a given object's html with a new string
 	 * if the current time exceeds a given timestamp
 	 * @param  {(Date|string)} ts      Expire timestamp to test against
 	 * @param  {string}        newText Text or HTML to replace with
@@ -158,7 +158,7 @@
 			return;
 		}
 		if (Date.now() > ts) {
-			this.text(newText);
+			this.html(newText);
 		}
 	};
 
