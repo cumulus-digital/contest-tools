@@ -11,7 +11,31 @@
 	// Finds the content wrapper that contains the contest and adds
 	// classes to its column and row so we don't need to necessarily
 	// know the exact markup of the page.
-	var tag = $('#CMLS_CONTEST');
+	var bodyClasses = window.document.body.classList,
+		postId = null;
+	for (var i in bodyClasses) {
+		if (bodyClasses[i].indexOf('postid-') > -1) {
+			postId = parseInt(bodyClasses[i].substr(7));
+			break;
+		}
+	}
+	if ( ! postId || isNaN(postId)) {
+		console.log('Could not find postid class!');
+		return false;
+	}
+
+	var $postContainer = $('.wrapper-content article#post-' + postId);
+	if ($postContainer.length) {
+		$postContainer
+			.parentsUntil('.wrapper-content', '.column,.row,.block-type-content')
+			.addClass('CMLS_CCC');
+		log('Added CMLS_CCC class to parent containers.');
+	} else {
+		log('Could not determine parent container!');
+	}
+
+	/*
+	// Old match when tag could be gauaranteed to be inside content area
 	if (tag.length) {
 		tag.parentsUntil('.wrapper-content', '.column,.row,.block-type-content')
 			.addClass('CMLS_CCC');
@@ -20,11 +44,12 @@
 		log('You must add id="CMLS_CONTEST" to the script tag which loads this library!');
 		return false;
 	}
+	*/
 
 	window._CMLS = window._CMLS || {};
 
 	// If we have a google analytics ID, set it up.
-	var gaID = tag.attr('data-google-analytics-id');
+	var gaID = $('#CMLS_CONTEST').attr('data-google-analytics-id');
 	if (gaID) {
 		log('Installing Google Analytics', gaID);
 		/**
@@ -96,7 +121,7 @@
 								checkOrigin: false,
 								heightCalculationMethod: isOldIE ? 'max' : 'lowestElement',
 								tolerance: 5,
-								initCallback: function(ifr) {
+								onInit: function(ifr) {
 									$(ifr).trigger('cmls-ifr-init');
 								}
 							}, this)
@@ -179,7 +204,6 @@
 	  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
-
 	/*ignore jslint end*/
 	/*jsl:end */
 	/* jshint ignore:end */
