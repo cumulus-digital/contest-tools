@@ -24,6 +24,8 @@
 		return false;
 	}
 
+	log('Found Post ID', postId);
+
 	var $postContainer = $('.wrapper-content article#post-' + postId);
 	if ($postContainer.length) {
 		$postContainer
