@@ -4,7 +4,7 @@
 		if (typeof console === 'object' && console.log) {
 			var ts = (new Date());
 			ts = ts.toISOString() ? ts.toISOString() : ts.toUTCString();
-			console.log('[CMLS Contesting]', ts, [].slice.call(arguments));
+			console.log('[CMLS Contesting]', ts, Array.prototype.slice.call(arguments));
 		}
 	}
 
@@ -14,8 +14,8 @@
 	var bodyClasses = window.document.body.classList,
 		postId = null;
 	for (var i in bodyClasses) {
-		if (bodyClasses[i].indexOf('postid-') > -1) {
-			postId = parseInt(bodyClasses[i].substr(7));
+		if (bodyClasses[i].toString().indexOf('postid-') > -1) {
+			postId = parseInt(bodyClasses[i].toString().substr(7));
 			break;
 		}
 	}
