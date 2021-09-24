@@ -1,4 +1,10 @@
 (function($, window, undefined) {
+
+	var frame = document.createElement('iframe');
+	frame.sandbox = 'allow-same-origin';
+	document.body.appendChild(frame);
+	var console = frame.contentWindow.console;
+
 	// Safe wrapper for console.log
 	function log(){
 		if (typeof console === 'object' && console.log) {
@@ -15,25 +21,26 @@
 		postId = null;
 	for (var i in bodyClasses) {
 		if (bodyClasses[i].toString().indexOf('postid-') > -1) {
+			console.log(bodyClasses[i]);
 			postId = parseInt(bodyClasses[i].toString().substr(7));
 			break;
 		}
 	}
 	if ( ! postId || isNaN(postId)) {
 		console.log('Could not find postid class!');
-		return false;
+		//return false;
 	}
 
-	log('Found Post ID', postId);
+	console.log('Found Post ID', postId);
 
-	var $postContainer = $('.wrapper-content article#post-' + postId);
+	var $postContainer = jQuery('.wrapper-content article#post-' + postId);
 	if ($postContainer.length) {
 		$postContainer
 			.parentsUntil('.wrapper-content', '.column,.row,.block-type-content')
 			.addClass('CMLS_CCC');
-		log('Added CMLS_CCC class to parent containers.');
+		console.log('Added CMLS_CCC class to parent containers.');
 	} else {
-		log('Could not determine parent container!');
+		console.log('Could not determine parent container!');
 	}
 
 	/*
