@@ -14,37 +14,7 @@
 		}
 	}
 
-	// Finds the content wrapper that contains the contest and adds
-	// classes to its column and row so we don't need to necessarily
-	// know the exact markup of the page.
-	var bodyClasses = window.document.body.classList,
-		postId = null;
-	for (var i in bodyClasses) {
-		if (bodyClasses[i].toString().indexOf('postid-') > -1) {
-			console.log(bodyClasses[i]);
-			postId = parseInt(bodyClasses[i].toString().substr(7));
-			break;
-		}
-	}
-	if ( ! postId || isNaN(postId)) {
-		console.log('Could not find postid class!');
-		//return false;
-	}
-
-	console.log('Found Post ID', postId);
-
-	var $postContainer = jQuery('.wrapper-content article#post-' + postId);
-	if ($postContainer.length) {
-		$postContainer
-			.parentsUntil('.wrapper-content', '.column,.row,.block-type-content')
-			.addClass('CMLS_CCC');
-		console.log('Added CMLS_CCC class to parent containers.');
-	} else {
-		console.log('Could not determine parent container!');
-	}
-
-	/*
-	// Old match when tag could be gauaranteed to be inside content area
+	var tag = $('#CMLS_CONTEST');
 	if (tag.length) {
 		tag.parentsUntil('.wrapper-content', '.column,.row,.block-type-content')
 			.addClass('CMLS_CCC');
@@ -53,12 +23,11 @@
 		log('You must add id="CMLS_CONTEST" to the script tag which loads this library!');
 		return false;
 	}
-	*/
 
 	window._CMLS = window._CMLS || {};
 
 	// If we have a google analytics ID, set it up.
-	var gaID = $('#CMLS_CONTEST').attr('data-google-analytics-id');
+	var gaID = tag.attr('data-google-analytics-id');
 	if (gaID) {
 		log('Installing Google Analytics', gaID);
 		/**
