@@ -6,7 +6,7 @@
 		if (typeof console === 'object' && console.log) {
 			var ts = (new Date());
 			ts = ts.toISOString() ? ts.toISOString() : ts.toUTCString();
-			console.log('[CMLS Contesting]', ts, [].slice.call(arguments));
+			console.log('[CMLS Contesting]', ts, Array.prototype.slice.call(arguments));
 		}
 	}
 
