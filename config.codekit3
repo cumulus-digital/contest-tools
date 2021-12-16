@@ -706,6 +706,14 @@
       "oAP" : "\/templates\/contest\/page-code.html",
       "oF" : 0
     },
+    "\/templates\/text-to-win\/t2w-iframe.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/templates\/text-to-win\/t2w-iframe.html",
+      "oF" : 0
+    },
     "\/templates\/text-to-win\/t2w-page.html" : {
       "cB" : 0,
       "ft" : 8192,
