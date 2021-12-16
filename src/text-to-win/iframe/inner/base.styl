@@ -68,6 +68,10 @@ img {
 	}
 }
 
+.irow {
+	margin: 0 0 10px;
+}
+
 .embed-container {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -81,5 +85,45 @@ img {
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+.album {
+	line-height: 1;
+	margin-bottom: 10px;
+	
+	img {
+		margin-bottom: 10px;
+		width: 100%;
+	}
+	
+	.purchase {
+		display: flex;
+		gap: 5px;
+		
+		.order {
+			display: inline-block;
+			background: #888;
+			border-radius: 2px;
+			color: #fff;
+			font-size: 16px;
+			padding: .5em;
+			text-decoration: none;
+			text-transform: uppercase;
+			
+			&:hover {
+				background: #333;
+			}
+		}
+		
+		.name {
+			font-size: 1.5em;
+			text-transform: uppercase;
+		}
+
+		.details {
+			font-size: 1em;
+		}
+				
 	}
 }
