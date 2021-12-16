@@ -1,0 +1,85 @@
+@require '../../../cms/fullwidth.styl';
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css);
+
+// Max width for section contents
+$module_max_width = 900px;
+
+* { box-sizing: border-box }
+
+html,body {
+	background: white;
+	font-size: 18px
+	margin: 0;
+	padding: 0;
+	
+	@media (max-width: ($module_max_width / 1.5)) {
+		font-size: 16px;
+	}
+}
+
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+
+h1,h2,h3,h4,h5 {
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+	h1 { font-size: 2em; }
+	h2 { font-size: 1.75em; }
+	h3 { font-size: 1.5em; }
+	h4 { font-size: 1.25em; }
+	h6 { font-size: 1em; }
+
+img {
+	display: inline-block;
+	outline: 0;
+	border: 0;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.row {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	
+	&.2-col {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 15px;
+		
+		&.with_cube {
+			grid-template-columns: 1fr 300px;
+		}
+	}
+	
+	@media (max-width: ($module_max_width / 1.5)) {
+		display: block !important;
+	}
+}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
