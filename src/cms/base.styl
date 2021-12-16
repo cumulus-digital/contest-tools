@@ -37,5 +37,11 @@ body .wrapper-content {
 		iframe[src*="digitalivy.com"] {
 			display: inherit;
 		}
+		
+		// Remove logged in crud
+		.logged-in iframe[sandbox="allow-same-origin"]:not([src]),
+		.tb_turn_on, .js-turn-on-builder {
+			display: none !important;
+		}
 	}
 }

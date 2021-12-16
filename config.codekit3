@@ -644,6 +644,21 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/src\/text-to-win\/iframe\/outer\/base.styl" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dS" : 0,
+      "ft" : 8,
+      "iC" : 1,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/dist\/text-to-win\/iframe\/outer\/base.css",
+      "oF" : 0,
+      "oS" : 1,
+      "pg" : 0,
+      "rrU" : 1
+    },
     "\/src\/text-to-win\/iframe\/outer\/fullwidth.styl" : {
       "aP" : 1,
       "bl" : 0,
