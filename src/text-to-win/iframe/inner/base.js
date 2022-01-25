@@ -35,7 +35,7 @@
 	}
 
 	// For any fake iframes
-	var iiframe = window.document.createElement('iiframe'); // jshint ignore:line
+	window.document.createElement('iiframe'); // jshint ignore:line
 
 	// Throttle from Underscore.js
 	var _throttle = function (func, wait) {
@@ -76,7 +76,7 @@
 		advance: 200,
 		getLoadable: function() {
 			if ( ! this.loadable) {
-				this.loadable = $(this.selector);
+				this.loadable = window.$(this.selector);
 			}
 			return this.loadable;
 		},
@@ -123,6 +123,7 @@
 	jqscr.onload = function(){
 		log('jQuery injected.');
 		var $ = window.jQuery;
+		window.$ = $;
 		var loadedEvent = window.self.document.createEvent('Event');
 		loadedEvent.initEvent('jquery.loaded', true, true);
 		window.self.dispatchEvent(loadedEvent);
@@ -186,6 +187,11 @@
 			window.self.parent.addEventListener("orientationchange", _throttle(_lazyload.handler, 500));
 
 			_lazyload.handler();
+
+			// activate bands in town widget
+			if ($('a[href*="bandsintown.com"],a.bit-widget-initializer').length) {
+				$.getScript('https://widget.bandsintown.com/main.min.js');
+			}
 
 		});
 

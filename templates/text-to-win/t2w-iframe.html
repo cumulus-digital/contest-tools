@@ -1,0 +1,144 @@
+<!--
+
+Encapsulate feature inside an iframe to fully isolate it
+from the station site's styles and scripts!
+HTML within the iframe tag will not be directly rendered,
+instead javascript will inject it inside the iframe document.
+
+-->
+
+<!-- REMOVE BEFORE POSTING -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- END REMOVE BEFORE POSTING -->
+
+<script
+	src="https://cdn.jsdelivr.net/gh/cumulus-digital/contest-tools@db216bd/src/text-to-win/iframe/outer/base.js"
+	id="CMLS_FEATURE"
+
+	data-google-analytics-id="UA-##########-##"
+></script>
+
+<link href="https://cdn.jsdelivr.net/gh/cumulus-digital/contest-tools@db216bd/dist/text-to-win/iframe/outer/fullwidth.css" rel="stylesheet" type="text/css">
+<div class="CMLS_CCC_CONTAINER">
+	<style>
+		/* Base page styles! */
+		.CMLS_CCC_CONTAINER {
+			background: #000 url(https://express-images.franklymedia.com/6616/2022/01/16150330/Metallica-Background.jpg) no-repeat top center;
+			background-size: contain;
+			background-attachment: fixed;
+		}
+	</style>
+
+	<iframe id="CMLS_TEMPLATE" style="display:none">
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<base target="_parent">
+
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width,initial-scale=1.0">
+				<meta http-equiv="x-ua-compatible" content="ie=edge">
+				<title>TITLE</title>
+				<link href="https://cdn.jsdelivr.net/gh/cumulus-digital/contest-tools@db216bd/dist/text-to-win/iframe/inner/base.css" rel="stylesheet" type="text/css">
+				<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/contest-tools@db216bd/src/text-to-win/iframe/inner/base.js"></script>
+
+				<!-- LOCAL STYLES HERE -->
+				<style>
+					body {
+						background-color: #f9f9f9;
+						font-family: arial, sans-serif;
+						color:  #000;
+					}
+
+					.content {
+						padding: 1em;
+					}
+
+					.album .purchase .order {
+						background: #A00;
+						font-weight: bold;
+					}
+						.album .purchase .order:hover {
+							background: #C00;
+						}
+				</style>
+				<!-- END LOCAL STYLES -->
+			</head>
+			<body>
+
+				<header>
+					<img
+						src=""
+						alt=""
+					>
+				</header>
+
+				<div class="content row col-2 with_cube">
+					<div class="col">
+
+						DETAILS
+
+						<div class="t2w-bit-header">See them LIVE near you!</div>
+
+						<!-- BANDS IN TOWN WIDGET -->
+						<a class="bit-widget-initializer" data-artist-name="CHANGEME" data-display-local-dates="false" data-display-past-dates="false" data-auto-style="false" data-text-color="#ffffff" data-link-color="#d8750f" data-background-color="rgba(0,0,0,0)" data-display-limit="7" data-display-start-time="false" data-link-text-color="#000000" data-display-lineup="false" data-display-play-my-city="true" data-separator-color="rgba(124,124,124,0.25)"></a>
+
+					</div>
+					<div class="col">
+
+						<div class="album irow">
+							<a 
+								href=""
+								target="_blank" rel="noopener"
+							>
+								<img
+									src=""
+									alt=""
+								>
+							</a>
+							<div class="purchase">
+								<a 
+									href=""
+									target="_blank" rel="noopener" class="order"
+								>
+									BUY NOW
+								</a>
+								<div>
+									<div class="name">
+										
+									</div>
+									<div class="details">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							data-href="https://www.facebook.com/CHANGEME/"
+							class="fb-page" data-width="700px" data-height="650px" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
+
+						<a class="twitter-timeline"
+							data-screen-name="CHANGEME"
+							href="https://twitter.com/CHANGEME"
+							data-theme="light"
+							data-link-color="#e6ae37"
+							data-dnt="true" data-widget-id="555779576849502208" data-chrome="transparent" height="420px" width="99.9%">
+							Tweets by @CHANGEME
+						</a>
+
+					</div>
+				</div>
+
+				<div class="row embed-container">
+					<iiframe
+						src="https://www.youtube-nocookie.com/embed/CHANGEME?rel=0&amp;controls=1&amp;showinfo=0&amp;modestbranding=1&amp;playsinline=1&amp;autohide=1"
+						frameborder="0" allowfullscreen="" class="fitvidsignore">
+					</iiframe>
+				</div>
+
+			</body>
+		</html>
+	</iframe>
+</div>
