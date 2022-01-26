@@ -26,8 +26,8 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', id, 'auto', {'name': 'contestTracker'});
-		ga('contestTracker.send', 'pageview');
+		window.ga('create', id, 'auto', {'name': 'contestTracker'});
+		window.ga('contestTracker.send', 'pageview');
 		/*ignore jslint end*/
 		/*jsl:end */
 		/* jshint ignore:end */
@@ -94,13 +94,16 @@
 		$new_frame.insertBefore($tag);
 		$tag.detach();
 
-		var new_frame_doc = $new_frame[0].contentDocument;
-
 		// Write contents of template into generated iframe
 		var template_content = $tag.text();
-		new_frame_doc.open();
-		new_frame_doc.write(template_content);
-		new_frame_doc.close();
+		if ( !!('srcdoc' in document.createElement('iframe'))) {
+			$new_frame[0].srcdoc = template_content;
+		} else {
+			var new_frame_doc = $new_frame[0].contentDocument;
+			new_frame_doc.open();
+			new_frame_doc.write(template_content);
+			new_frame_doc.close();
+		}
 
 		// Inject iFrameResizer into parent window
 		var ifscr = frame_parent.document.createElement('script'),
@@ -132,4 +135,4 @@
 
 	}, frame_parent.document);
 
-})(jQuery, window);
+})(window.jQuery, window.self);

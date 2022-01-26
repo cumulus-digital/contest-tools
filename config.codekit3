@@ -1105,7 +1105,7 @@
         "optionString" : "{'exceptMethods': []}"
       },
       "comma-dangle" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "'never'"
       },
       "comma-spacing" : {
@@ -1436,7 +1436,7 @@
         "active" : 0
       },
       "no-extra-boolean-cast" : {
-        "active" : 1
+        "active" : 0
       },
       "no-extra-labels" : {
         "active" : 0
@@ -1752,7 +1752,7 @@
         "active" : 0
       },
       "no-unused-vars" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "{'vars': 'all', 'args': 'after-used', 'caughtErrors': 'none'}"
       },
       "no-use-before-define" : {
