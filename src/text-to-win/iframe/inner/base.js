@@ -201,9 +201,12 @@
 	// Start up iframe-resizer
 	log('Injecting iframe-resizer contentWindow library');
 	var ifscr = window.document.createElement('script');
-	ifscr.src = 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.1/iframeResizer.contentWindow.min.js';
+	ifscr.src = 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.min.js';
 	ifscr.onload = function() {
 		log('iframe-resizer contentWindow loaded.');
+		var loadedEvent = window.self.document.createEvent('Event');
+		loadedEvent.initEvent('ifr.loaded', true, true);
+		window.self.dispatchEvent(loadedEvent);
 	};
 	window.document.head.appendChild(ifscr);
 
