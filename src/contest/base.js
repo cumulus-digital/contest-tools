@@ -1,5 +1,4 @@
 // @codekit-prepend "../../node_modules/iframe-resizer/js/iframeResizer.contentWindow.js";
-
 (function($, window, undefined) {
 
 	function log() {
@@ -47,25 +46,26 @@
 	 * @param  {string} id GA Property ID
 	 */
 	window.installGoogleAnalytics = function(id) {
-		if (window.top !== window.self || ! id) {
+		if ( ! id) {
+			log('No ID provided to installGoogleAnalytics');
 			return;
 		}
-		log('Installing Google Analytics ID ', id);
-
-		/* jshint ignore:start */
-		/*jsl:ignore* /
-		/*ignore jslint start*/
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', id, 'auto', {'name': 'contestTracker'});
-		ga('contestTracker.send', 'pageview');
-		/*ignore jslint end*/
-		/*jsl:end */
-		/* jshint ignore:end */
-
+		if (window.top !== window.self) {
+			log('Contest is embedded, not installing Google Analytics again.');
+			return;
+		}
+		var scr = window.document.createElement('script');
+		scr.async = 'async';
+		scr.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+		scr.onload = function(){
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){
+				window.dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', id, { 'cookie_prefix': 'cmls_contest' });
+		}
+		window.document.body.appendChild(scr);
 	};
 
 	/**
