@@ -78,7 +78,7 @@ module.exports = (env) => {
 		},
 		output: {
 			filename: '[name].js',
-			path: resolve(process.cwd(), 'build'),
+			path: resolve(process.cwd(), 'dist'),
 		},
 		resolve: {
 			alias: {
