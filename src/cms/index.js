@@ -49,7 +49,7 @@ import Logger from 'Utils/Logger.js';
 	}
 	log.info('Added content classes.');
 
-	window._CMLS.installGoogleAnalytics = (id) => {
+	const installGoogleAnalytics = (id) => {
 		if (!id) {
 			log.warn('No Google Analytics ID provided.');
 			return;
@@ -73,7 +73,7 @@ import Logger from 'Utils/Logger.js';
 	// Install our GA tag if available
 	const gaID = $BASETAG.attr('data-google-analytics-id');
 	if (gaID) {
-		window._CMLS.installGoogleAnalytics(gaID);
+		installGoogleAnalytics(gaID);
 	}
 
 	// Set up iFrameResizer for any iframes in our post
@@ -114,7 +114,7 @@ import Logger from 'Utils/Logger.js';
 		const scr = DOC.createElement('script');
 		scr.onload = function () {
 			log.info('Setting up iFrameResizer');
-			window.contestIframeResizerObject = [];
+			DOC.defaultView.contestIframeResizerObject = [];
 			resizeFrames.each(function () {
 				log.info('Attaching iFrameResizer to iframe', this);
 				window.contestIframeResizerObject.push(
