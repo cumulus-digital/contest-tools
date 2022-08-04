@@ -1,7 +1,3 @@
-@import 'nib'
-
-$breakpoint = 720px
-
 body {
 	margin: 0 !important;
 	background-position: center top !important;
@@ -14,7 +10,9 @@ body {
 	.ad--bottom,
 	#admin-preview-message,
 	#tabBackHome,
-	#navigation { display: none !important; }
+	#navigation {
+		display: none !important;
+	}
 
 	// Removes any built-in margin/padding on header graphic.
 	#header {
@@ -39,27 +37,27 @@ body {
 	#container-contentbg {
 		@media (max-width: 694px) {
 			padding: 0 !important;
-		}		
+		}
 	}
 	#container-contest {
 		background: transparent;
-		box-shadow: 0 0 30px rgba(0,0,0,0.7) !important;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.7) !important;
 	}
-	
+
 	// Clean up the content area
 	#container-content {
 		line-height: 1.4;
-		
+
 		@media (max-width: 694px) {
 			padding: 0 !important;
 			width: 93% !important;
 		}
-		
+
 		p {
 			margin-bottom: 0.75em;
 			padding: 0;
 		}
-		
+
 		.pagetitle {
 			border-bottom: 0 !important;
 		}
@@ -73,7 +71,7 @@ body {
 		max-width: 700px !important;
 		left: 50% !important;
 		transform: translateX(-50%);
-		
+
 		@media (max-width: 700px) {
 			#popup-rules {
 				padding: 0 !important;
@@ -84,9 +82,8 @@ body {
 		#popup-rules {
 			width: auto !important;
 		}
-		
 	}
-	
+
 	// Remove ugliness on submit button
 	.submit {
 		background-image: none;
@@ -95,7 +92,6 @@ body {
 		line-height: 1.3;
 		text-shadow: none;
 	}
-	
 }
 
 .twitter-timeline {
@@ -103,32 +99,27 @@ body {
 }
 
 #socialShareControlParentContainer {
-	
 	.share-text {
 		opacity: 0.8;
 	}
 
 	a {
 		opacity: 0.8;
-		
+
 		&:hover {
 			opacity: 1;
 		}
 	}
-	
+
 	@media all and (max-width: 550px) {
 		zoom: 0.8;
 	}
 	@media all and (max-width: 450px) {
 		zoom: 0.7;
 	}
-	
+
 	// Stop page title from dropping below Social Share buttons.
-	/#container-contest h1.sweeps {
+	@at-root #container-contest h1.sweeps {
 		width: auto;
 	}
 }
-
-@require 'embed-container'
-@require 'cm-layout'
-@require 'bandsintown.styl'

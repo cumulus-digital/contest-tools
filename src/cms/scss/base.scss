@@ -1,0 +1,49 @@
+.tb_turn_on,
+.js-turn-on-builder,
+.themify_builder_content,
+.themify_builder_turn_on,
+.logged-in iframe[sandbox="allow-same-origin"]:not([src]),
+.hideme {
+	display: none !important;
+}
+
+// Remove extra space under contest iframe
+.cmls-entry iframe[src*="digitalivy.com"] {
+	display: inherit !important;
+}
+
+// Handle non-FSE sites
+body:not(.is-fse-theme) {
+	.wrapper-content {
+		#comments,
+		article > header,
+		article > footer,
+		.entry-title,
+		.entry-meta,
+		.post-thumbnail {
+			display: none !important;
+		}
+	}
+
+	.CMLS_CCC {
+		display: block !important;
+		min-height: auto !important;
+		.entry-content {
+			margin-top: 0 !important;
+		}
+	}
+}
+
+// Remove post header
+body:not(.is-fse-theme) .wrapper-content article.cmls-entry,
+.cmls-entry {
+	& > header,
+	& > .wp-block-template-part > header {
+		display: none !important;
+	}
+}
+
+// Remove margin on entry content
+.cmls-entry-content {
+	margin-top: 0;
+}

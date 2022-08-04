@@ -3,7 +3,11 @@
 This goes in the Header Code in a contest's Expert Options.
 
 -->
-<link href="dist/contest/base.css" rel="stylesheet" type="text/css">
+<link href="build/contest.css" rel="stylesheet" type="text/css">
+<!--
+	Include if you build cm-layout
+	<link href="build/contest_layout.css" rel="stylesheet" type="text/css">
+-->
 <style>
 	/* Contest-specific styles */
 
@@ -17,8 +21,9 @@ This goes in the Header Code in a contest's Expert Options.
 	}
 
 </style>
-<script src="dist/contest/base.js" type="text/javascript"></script>
-<script type="text/javascript">
-	// Install Google Analytics
-	installGoogleAnalytics('UA-########-##');
-</script>
+<script
+	src="build/contest.js"
+	id="CMLS_CONTEST"
+
+	data-google-analytics-id="UA-########-##"
+></script>
