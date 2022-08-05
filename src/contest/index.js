@@ -30,9 +30,14 @@ import Logger from 'Utils/Logger.js';
 		});
 
 		// Install Bands in Town script if needed
-		// Install Bands In Town widget script
 		if ($('a[href*="bandsintown.com"],a.bit-widget-initializer').length) {
 			$.getScript('https://widget.bandsintown.com/main.min.js');
+		}
+
+		// Install our GA tag if available
+		const gaID = $BASETAG.attr('data-google-analytics-id');
+		if (gaID) {
+			window._CMLS.installGoogleAnalytics(gaID);
 		}
 
 		/* jshint ignore:start */
@@ -85,12 +90,6 @@ import Logger from 'Utils/Logger.js';
 		};
 		DOC.body.appendChild(scr);
 	};
-
-	// Install our GA tag if available
-	const gaID = $BASETAG.attr('data-google-analytics-id');
-	if (gaID) {
-		window._CMLS.installGoogleAnalytics(gaID);
-	}
 
 	/**
 	 * jQuery function to replace a given object's text with a new string
