@@ -9,6 +9,7 @@
 	p {
 		margin-block-start: 0;
 		margin-block-end: 0.75em;
+		font-size: inherit;
 		&:last-of-type {
 			margin-block-end: 0;
 		}
