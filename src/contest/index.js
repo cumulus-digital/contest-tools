@@ -2,6 +2,9 @@ import './scss/base.scss';
 import Logger from 'Utils/Logger.js';
 
 (function ($, window, undefined) {
+	window._CMLS = window._CMLS || {};
+	const DOC = window.document;
+
 	$(() => {
 		/**
 		 * Do not run inside the contest designer. Prevents code from running that may
@@ -10,9 +13,6 @@ import Logger from 'Utils/Logger.js';
 		if ($('body.contest-sweeps,body.contest-ugc').length < 1) {
 			return;
 		}
-
-		const DOC = window.document;
-		window._CMLS = window._CMLS || {};
 
 		const $BASETAG = $('#CMLS_CONTEST', DOC);
 		if (!$BASETAG.length) {
