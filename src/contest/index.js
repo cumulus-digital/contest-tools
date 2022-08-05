@@ -12,6 +12,7 @@ import Logger from 'Utils/Logger.js';
 		}
 
 		const DOC = window.document;
+		window._CMLS = window._CMLS || {};
 
 		const $BASETAG = $('#CMLS_CONTEST', DOC);
 		if (!$BASETAG.length) {
