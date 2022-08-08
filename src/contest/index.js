@@ -6,6 +6,11 @@ import Logger from 'Utils/Logger.js';
 	const DOC = window.document;
 
 	$(() => {
+		// Install iframeResizer content script
+		$.getScript(
+			'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.min.js'
+		);
+
 		/**
 		 * Do not run inside the contest designer. Prevents code from running that may
 		 * alter the page structure, which may get saved permanently in the editor.
