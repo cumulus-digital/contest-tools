@@ -47,7 +47,7 @@ import Logger from 'Utils/Logger.js';
 		const fseParents = $BASETAG.parentsUntil('.wp-site-blocks');
 		fseParents.last().addClass('cmls-wrapper-content');
 		$('.cmls-entry-wrapper')
-			.parentsUntil('.cmls-wrapper-content')
+			.parentsUntil('.wp-site-blocks')
 			.addClass('CMLS_CCC');
 	}
 	log.info('Added content classes.');
