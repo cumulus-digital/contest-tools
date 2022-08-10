@@ -46,6 +46,9 @@ import Logger from 'Utils/Logger.js';
 	} else {
 		const fseParents = $BASETAG.parentsUntil('.wp-site-blocks');
 		fseParents.last().addClass('cmls-wrapper-content');
+		$('.cmls-entry-wrapper')
+			.parentsUntil('.cmls-wrapper-content')
+			.addClass('CMLS_CCC');
 	}
 	log.info('Added content classes.');
 
