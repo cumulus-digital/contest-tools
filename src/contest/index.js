@@ -123,7 +123,7 @@ if (!window.twttr) {
 		};
 
 		return t;
-	})(DOC, 'script', 'twitter-wjs');
+	})(window.self.document, 'script', 'twitter-wjs');
 }
 
 // Facebook
@@ -135,4 +135,4 @@ if (!window.twttr) {
 	js.id = id;
 	js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0';
 	fjs.parentNode.insertBefore(js, fjs);
-})(DOC, 'script', 'facebook-jssdk');
+})(window.self.document, 'script', 'facebook-jssdk');
