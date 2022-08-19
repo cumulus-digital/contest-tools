@@ -99,40 +99,41 @@ import Logger from 'Utils/Logger.js';
 		if (gaID) {
 			window._CMLS.installGoogleAnalytics(gaID);
 		}
+
+		/**
+		 * THIRD PARTY CODE
+		 */
+		// Twitter
+		if (!window.twttr) {
+			window.twttr = (function (d, s, id) {
+				var js,
+					fjs = d.getElementsByTagName(s)[0],
+					t = window.twttr || {};
+				if (d.getElementById(id)) return t;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = 'https://platform.twitter.com/widgets.js';
+				fjs.parentNode.insertBefore(js, fjs);
+
+				t._e = [];
+				t.ready = function (f) {
+					t._e.push(f);
+				};
+
+				return t;
+			})(DOC, 'script', 'twitter-wjs');
+		}
+
+		// Facebook
+		(function (d, s, id) {
+			var js,
+				fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src =
+				'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0';
+			fjs.parentNode.insertBefore(js, fjs);
+		})(DOC, 'script', 'facebook-jssdk');
 	});
 })(jQuery, window.self);
-
-/**
- * THIRD PARTY CODE
- */
-// Twitter
-if (!window.twttr) {
-	window.twttr = (function (d, s, id) {
-		var js,
-			fjs = d.getElementsByTagName(s)[0],
-			t = window.twttr || {};
-		if (d.getElementById(id)) return t;
-		js = d.createElement(s);
-		js.id = id;
-		js.src = 'https://platform.twitter.com/widgets.js';
-		fjs.parentNode.insertBefore(js, fjs);
-
-		t._e = [];
-		t.ready = function (f) {
-			t._e.push(f);
-		};
-
-		return t;
-	})(window.self.document, 'script', 'twitter-wjs');
-}
-
-// Facebook
-(function (d, s, id) {
-	var js,
-		fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
-	js = d.createElement(s);
-	js.id = id;
-	js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0';
-	fjs.parentNode.insertBefore(js, fjs);
-})(window.self.document, 'script', 'facebook-jssdk');
