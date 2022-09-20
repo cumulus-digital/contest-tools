@@ -113,7 +113,7 @@ import Logger from 'Utils/Logger.js';
 		}
 
 		const ifrSrc =
-			'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js';
+			'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js';
 		const scr = DOC.createElement('script');
 		scr.onload = function () {
 			log.info('Setting up iFrameResizer');
