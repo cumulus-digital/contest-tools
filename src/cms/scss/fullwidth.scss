@@ -19,6 +19,9 @@ body.is-fse-theme {
 	.cmls-entry-wrapper + * {
 		display: none;
 	}
+	.wp-block-express-cms-blocks-contest {
+		max-width: 100% !important;
+	}
 }
 
 // Handle non-FSE sites
