@@ -7,11 +7,10 @@ import Logger from 'Utils/Logger.js';
 
 	// Disable freestar sidewall
 	function disableFreestarSidewall(w) {
-		if (w.freestar) {
-			window.freestar.config = window.freestar.config || {};
-			window.freestar.config.disabledProducts =
-				window.freestar.config.disabledProducts || {};
-			window.freestar.config.disabledProducts.sideWall = true;
+		if (w.freestar.config) {
+			w.freestar.config.disabledProducts =
+				w.freestar.config.disabledProducts || {};
+			w.freestar.config.disabledProducts.sideWall = true;
 		}
 	}
 	disableFreestarSidewall(window.self);
