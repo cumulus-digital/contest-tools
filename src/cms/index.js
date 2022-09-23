@@ -6,12 +6,17 @@ import Logger from 'Utils/Logger.js';
 	const log = new Logger('CONTEST');
 
 	// Disable freestar sidewall
-	if (window.freestar) {
-		window.freestar.config = window.freestar.config || {};
-		window.freestar.config.disabledProducts =
-			window.freestar.config.disabledProducts || {};
-		window.freestar.config.disabledProducts.sideWall = true;
+	function disableFreestarSidewall(w) {
+		if (w.freestar) {
+			window.freestar.config = window.freestar.config || {};
+			window.freestar.config.disabledProducts =
+				window.freestar.config.disabledProducts || {};
+			window.freestar.config.disabledProducts.sideWall = true;
+		}
 	}
+	disableFreestarSidewall(window.self);
+	disableFreestarSidewall(window.parent);
+	disableFreestarSidewall(window.top);
 
 	// Remove/hide AddThis
 	if (window.addthis) {
