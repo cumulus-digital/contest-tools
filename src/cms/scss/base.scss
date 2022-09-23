@@ -36,9 +36,8 @@ body:not(.is-fse-theme) {
 
 // Remove post header
 body:not(.is-fse-theme) .wrapper-content article.cmls-entry,
-.cmls-entry {
-	& > header,
-	& > .wp-block-template-part > header {
+body.is-fse-theme .cmls-entry-wrapper {
+	& > header {
 		display: none !important;
 	}
 }
