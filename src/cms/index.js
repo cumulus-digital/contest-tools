@@ -5,6 +5,14 @@ import Logger from 'Utils/Logger.js';
 (function ($, window, undefined) {
 	const log = new Logger('CONTEST');
 
+	// Disable freestar sidewall
+	if (window.freestar) {
+		window.freestar.config = window.freestar.config || {};
+		window.freestar.config.disabledProducts =
+			window.freestar.config.disabledProducts || {};
+		window.freestar.config.disabledProducts.sideWall = true;
+	}
+
 	// Remove/hide AddThis
 	if (window.addthis) {
 		log.info('Hiding AddThis');
