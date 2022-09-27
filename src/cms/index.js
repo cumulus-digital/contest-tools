@@ -7,7 +7,7 @@ import Logger from 'Utils/Logger.js';
 
 	// Disable freestar sidewall
 	function disableFreestarSidewall(w) {
-		if (w.freestar.config) {
+		if (w.freestar && w.freestar.config) {
 			w.freestar.config.disabledProducts =
 				w.freestar.config.disabledProducts || {};
 			w.freestar.config.disabledProducts.sideWall = true;
