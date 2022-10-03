@@ -8,16 +8,6 @@ import Logger from 'Utils/Logger.js';
 
 	const $BODY = $('body', DOC);
 
-	const $BASETAG = $('#CMLS_CONTEST', DOC);
-	if (!$BASETAG.length) {
-		log.warn({
-			message:
-				'You must add id="CMLS_CONTEST" to the script tag which loads this library!',
-			headerLength: Infinity,
-		});
-		return;
-	}
-
 	/**
 	 * Installs Google Analytics only if we're not inside an iframe.
 	 * @param  {string} id GA Property ID
@@ -75,6 +65,8 @@ import Logger from 'Utils/Logger.js';
 	};
 
 	$(() => {
+		log.info('Initializing Engage-level scripting!');
+
 		// Install iframeResizer content script
 		$.getScript(
 			'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.min.js'
