@@ -83,12 +83,15 @@ import Logger from 'Utils/Logger.js';
 			gtag('config', id, { cookie_prefix: 'cmls_contest' });
 		};
 		DOC.body.appendChild(scr);
+		log.info('GA Installed', id);
 	};
 
 	// Install our GA tag if available
 	const gaID = $BASETAG.attr('data-google-analytics-id');
 	if (gaID) {
 		installGoogleAnalytics(gaID);
+	} else {
+		log.info('GA ID not provided.');
 	}
 
 	// Set up iFrameResizer for any iframes in our post
@@ -206,7 +209,7 @@ import Logger from 'Utils/Logger.js';
 			ts = new Date(Date.parse(ts));
 		}
 		if (!(ts instanceof Date) || isNaN(ts.getTime())) {
-			log(
+			log.warn(
 				'Supplied expireReplace timestamp is an invalid date.',
 				ts,
 				ts instanceof Date
