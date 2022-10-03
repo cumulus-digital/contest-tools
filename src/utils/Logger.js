@@ -130,7 +130,8 @@ export default class Logger {
 		// Only display if debug flag is set
 		if (
 			window?._CMLS?.debug ||
-			/(1|true|yes)/i.test(window.sessionStorage.getItem('cmlsDebug'))
+			/(1|true|yes)/i.test(window.sessionStorage.getItem('cmlsDebug')) ||
+			window.location.search.includes('cmlsDebug')
 		) {
 			this.displayHeader(type, message, headerLength);
 			if (headerLength !== Infinity) {

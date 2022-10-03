@@ -98,6 +98,7 @@ import Logger from 'Utils/Logger.js';
 
 		// Install Bands in Town script if needed
 		if ($('a[href*="bandsintown.com"],a.bit-widget-initializer').length) {
+			log.info('Adding Bands in Town widget script');
 			$.getScript('https://widget.bandsintown.com/main.min.js');
 		}
 
