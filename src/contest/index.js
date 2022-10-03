@@ -3,7 +3,19 @@ import Logger from 'Utils/Logger.js';
 
 (function ($, window, undefined) {
 	window._CMLS = window._CMLS || {};
-	const DOC = window.document;
+	const DOC = window.self.document;
+
+	const $BODY = $('body', DOC);
+
+	const $BASETAG = $('#CMLS_CONTEST', DOC);
+	if (!$BASETAG.length) {
+		log.warn({
+			message:
+				'You must add id="CMLS_CONTEST" to the script tag which loads this library!',
+			headerLength: Infinity,
+		});
+		return;
+	}
 
 	/**
 	 * Installs Google Analytics only if we're not inside an iframe.
@@ -35,6 +47,12 @@ import Logger from 'Utils/Logger.js';
 		};
 		DOC.body.appendChild(scr);
 	};
+
+	// Install our GA tag if available
+	const gaID = $BASETAG.attr('data-google-analytics-id');
+	if (gaID) {
+		window._CMLS.installGoogleAnalytics(gaID);
+	}
 
 	/**
 	 * jQuery function to replace a given object's text with a new string
