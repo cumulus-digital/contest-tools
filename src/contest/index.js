@@ -76,7 +76,8 @@ import Logger from 'Utils/Logger.js';
 		 * Do not run inside the contest designer. Prevents code from running that may
 		 * alter the page structure, which may get saved permanently in the editor.
 		 */
-		if ($('body.contest-sweeps,body.contest-ugc').length < 1) {
+		if (window.self.name.indexOf('contestpreview-container') > -1) {
+			log.info('This is a preview, will not run engage-level scripting.');
 			return;
 		}
 
