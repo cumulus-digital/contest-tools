@@ -23,20 +23,22 @@ import Logger from 'Utils/Logger.js';
 			);
 			return;
 		}
-		const scr = DOC.createElement('script');
-		scr.async = 'async';
-		scr.scr =
-			'https://www.googletagmanager.com/gtag/js?id=' +
-			encodeURIComponent(id);
-		scr.onload = function () {
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				window.dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', id, { cookie_prefix: 'cmls_contest' });
-		};
-		DOC.body.appendChild(scr);
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			window.dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', id, { cookie_prefix: 'cmls_contest' });
+
+		$('<script />', {
+			id: 'CMLS_CONTEST_GA',
+			async: true,
+			src:
+				'https://www.googletagmanager.com/gtag/js?id=' +
+				encodeURIComponent(id),
+		}).appendTo(DOC.body);
+
 		log.info('GA Installed', id);
 	};
 
