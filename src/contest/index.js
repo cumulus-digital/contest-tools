@@ -3,6 +3,7 @@ import Logger from 'Utils/Logger.js';
 
 (function ($, window, undefined) {
 	window._CMLS = window._CMLS || {};
+	const log = new Logger('CONTEST');
 	const DOC = window.self.document;
 
 	const $BODY = $('body', DOC);
@@ -23,11 +24,11 @@ import Logger from 'Utils/Logger.js';
 	 */
 	window._CMLS.installGoogleAnalytics = function (id) {
 		if (!id) {
-			console.warn('No Google Analytics ID provided.');
+			log.warn('No Google Analytics ID provided.');
 			return;
 		}
 		if (window.top !== window.self) {
-			console.log(
+			log.info(
 				'Contest is embedded, not installing Google Analytics again.'
 			);
 			return;
@@ -46,13 +47,8 @@ import Logger from 'Utils/Logger.js';
 			gtag('config', id, { cookie_prefix: 'cmls_contest' });
 		};
 		DOC.body.appendChild(scr);
+		log.info('GA Installed', id);
 	};
-
-	// Install our GA tag if available
-	const gaID = $BASETAG.attr('data-google-analytics-id');
-	if (gaID) {
-		window._CMLS.installGoogleAnalytics(gaID);
-	}
 
 	/**
 	 * jQuery function to replace a given object's text with a new string
@@ -66,7 +62,7 @@ import Logger from 'Utils/Logger.js';
 			ts = new Date(Date.parse(ts));
 		}
 		if (!(ts instanceof Date) || isNaN(ts.getTime())) {
-			log(
+			log.warn(
 				'Supplied expireReplace timestamp is an invalid date.',
 				ts,
 				ts instanceof Date
@@ -116,6 +112,8 @@ import Logger from 'Utils/Logger.js';
 		const gaID = $BASETAG.attr('data-google-analytics-id');
 		if (gaID) {
 			window._CMLS.installGoogleAnalytics(gaID);
+		} else {
+			log.info('No GA ID provided.');
 		}
 
 		/**
