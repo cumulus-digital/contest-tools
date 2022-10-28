@@ -113,13 +113,13 @@ export default class Logger {
 			}
 		}
 
-		window.top.console.groupCollapsed.apply(window.top.console, header);
+		window.console.groupCollapsed.apply(window.console, header);
 	}
 
 	displayFooter() {
-		window.top.console.debug('TIMESTAMP:', this.timestamp());
-		window.top.console.trace();
-		window.top.console.groupEnd();
+		window.console.debug('TIMESTAMP:', this.timestamp());
+		window.console.trace();
+		window.console.groupEnd();
 	}
 
 	logMessage(type, message, headerLength = 160) {
@@ -138,12 +138,12 @@ export default class Logger {
 			) {
 				this.displayHeader(type, message, headerLength);
 				if (headerLength !== Infinity) {
-					window.top.console.debug(message);
+					window.console.debug(message);
 				}
 				this.displayFooter();
 			}
 		} catch (e) {
-			window.top.console.debug(e, message);
+			window.console.debug(e, message);
 		}
 	}
 
