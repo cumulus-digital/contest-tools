@@ -143,7 +143,9 @@ export default class Logger {
 				this.displayFooter();
 			}
 		} catch (e) {
-			window.console.debug(e, message);
+			try {
+				window.console.debug(e, message);
+			} catch (e) {}
 		}
 	}
 
