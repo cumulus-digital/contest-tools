@@ -128,16 +128,22 @@ export default class Logger {
 		}
 
 		// Only display if debug flag is set
-		if (
-			window?._CMLS?.debug ||
-			/(1|true|yes)/i.test(window.sessionStorage.getItem('cmlsDebug')) ||
-			window.location.search.includes('cmlsDebug')
-		) {
-			this.displayHeader(type, message, headerLength);
-			if (headerLength !== Infinity) {
-				window.top.console.debug(message);
+		try {
+			if (
+				window?._CMLS?.debug ||
+				/(1|true|yes)/i.test(
+					window?.sessionStorage?.getItem('cmlsDebug')
+				) ||
+				window.location.search.includes('cmlsDebug')
+			) {
+				this.displayHeader(type, message, headerLength);
+				if (headerLength !== Infinity) {
+					window.top.console.debug(message);
+				}
+				this.displayFooter();
 			}
-			this.displayFooter();
+		} catch (e) {
+			window.top.console.debug(e, message);
 		}
 	}
 
