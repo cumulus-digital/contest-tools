@@ -21,7 +21,7 @@ import Logger from 'Utils/Logger.js';
 	if (window.addthis) {
 		log.info('Hiding AddThis');
 		window.addthis.layers(function (layer) {
-			layers.destroy();
+			layer.destroy();
 		});
 	}
 	window.NO_ADDTHIS_HERE = true;
