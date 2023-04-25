@@ -21,7 +21,7 @@
     "core-js": "^3.22.4",
     "core-js-compat": "^3.22.4",
     "css-loader": "^6.7.1",
-    "cssnano": "^5.1.12",
+    "cssnano": "^6.0.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss-loader": "^7.0.1",
