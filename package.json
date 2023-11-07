@@ -1,6 +1,5 @@
 {
   "name": "contest-tools",
-  "version": "1.0.5",
   "description": "Front-end scripting for CMLS contest posts",
   "main": "index.js",
   "scripts": {
