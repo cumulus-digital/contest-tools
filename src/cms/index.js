@@ -116,9 +116,11 @@ import Logger from 'Utils/Logger.js';
 			'[src*="youtube"]',
 			'[src*="syndirect"]',
 			'.twitter-timeline',
+			'.isoframe-template',
+			'.isoframe-processed',
 		];
 		const resizeFrames = $(
-			`.cmls-entry-content iframe:not('${ignoreFrames.join(',')}')`
+			`.cmls-entry-content iframe[src]:not('${ignoreFrames.join(',')}')`
 		);
 
 		if (!resizeFrames.length) {
