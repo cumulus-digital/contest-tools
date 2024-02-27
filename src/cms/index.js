@@ -75,7 +75,7 @@ import Logger from 'Utils/Logger.js';
 			window.dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', id, { cookie_prefix: 'cmls_contest' });
+		gtag('config', id);
 
 		$('<script />', {
 			id: 'CMLS_CONTEST_GA',
