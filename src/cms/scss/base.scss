@@ -14,7 +14,10 @@
 
 // Handle non-FSE sites
 body:not(.is-fse-theme) {
-	.wrapper-content {
+	.column.CMLS_CCC {
+		display: block !important;
+		min-height: auto !important;
+
 		#comments,
 		article > header,
 		article > footer,
@@ -23,11 +26,7 @@ body:not(.is-fse-theme) {
 		.post-thumbnail {
 			display: none !important;
 		}
-	}
 
-	.CMLS_CCC {
-		display: block !important;
-		min-height: auto !important;
 		.entry-content {
 			margin-top: 0 !important;
 		}
