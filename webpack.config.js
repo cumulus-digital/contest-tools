@@ -120,8 +120,10 @@ module.exports = (env) => {
 								[
 									'@babel/preset-env',
 									{
+										loose: true,
+										debug: true,
 										useBuiltIns: 'usage',
-										corejs: 3,
+										corejs: require('core-js/package.json').version,
 									},
 								],
 							],

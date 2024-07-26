@@ -75,11 +75,6 @@ body:not(.is-fse-theme) {
 
 body:not(.is-fse-theme) .wrapper-content article.cmls-entry,
 .cmls-entry {
-	& > header,
-	& > .wp-block-template-part > header {
-		display: none !important;
-	}
-
 	float: none !important;
 	margin: 0 auto !important;
 	max-width: 100% !important;
@@ -87,6 +82,10 @@ body:not(.is-fse-theme) .wrapper-content article.cmls-entry,
 	position: relative !important;
 	width: 900px !important;
 
+	& > header,
+	& > .wp-block-template-part > header {
+		display: none !important;
+	}
 	p:last-of-type {
 		margin-bottom: 0;
 	}
