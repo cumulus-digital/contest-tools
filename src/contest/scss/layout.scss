@@ -73,6 +73,8 @@
 
 		@media (max-width: 600px) {
 			flex-direction: column;
+			width: calc(100% - 2em);
+			margin: 0 auto;
 		}
 	}
 	.cm-col {
