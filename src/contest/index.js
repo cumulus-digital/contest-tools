@@ -1,18 +1,75 @@
 import './scss/base.scss';
+import { h, Fragment } from 'Utils/createElement.js';
+import waitFor from 'Utils/waitFor';
 import Logger from 'Utils/Logger.js';
 
 (function ($, window, undefined) {
 	window._CMLS = window._CMLS || {};
-	const log = new Logger('CONTEST');
+	const log = new Logger('CONTEST 3.0');
 	const DOC = window.self.document;
 
 	const $BODY = $('body', DOC);
 
+	log.info('loading');
+
+	/**
+	 * Do not run inside the contest designer. Prevents code from running that may
+	 * alter the page structure, which may get saved permanently in the editor.
+	 */
+	if (window.self.name.indexOf('contestpreview-container') > -1) {
+		log.info('This is a preview, will not run engage-level scripting.');
+		return;
+	}
+
+	DOC.head.append(
+		<script
+			src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.3.11/js/iframeResizer.contentWindow.js"
+			async
+		></script>
+	);
+
+	const $BASETAG = $('#CMLS_CONTEST', DOC);
+	if (!$BASETAG.length) {
+		log.error(
+			'You must add id="CMLS_CONTEST" to the script tag which loads this library!'
+		);
+		return;
+	}
+
+	log.info('Initializing Engage-level scripting!');
+
+	window.addEventListener('click', (e) => {
+		if (e.target.matches('#fancyrules') && 'parentIFrame' in window) {
+			window.parentIFrame.scrollToOffset(0, 0);
+		}
+	});
+
+	// Set up BandsInTown widget if it exists
+	waitFor(
+		() =>
+			document.querySelectorAll(
+				'a[href*="bandsintown.com"],a.bit-widget-initializer'
+			)?.length,
+		50000,
+		500
+	)
+		.then(() => {
+			document.body.append(
+				<script
+					async
+					defer
+					crossorigin="anonymous"
+					src="https://widget.bandsintown.com/main.min.js"
+				></script>
+			);
+		})
+		.catch(() => {});
+
 	/**
 	 * Installs Google Analytics only if we're not inside an iframe.
-	 * @param  {string} id GA Property ID
+	 * @param {string} id GA Property ID
 	 */
-	window._CMLS.installGoogleAnalytics = function (id) {
+	window._CMLS.installGoogleAnalytics = (id) => {
 		if (!id) {
 			log.warn('No Google Analytics ID provided.');
 			return;
@@ -31,16 +88,33 @@ import Logger from 'Utils/Logger.js';
 		gtag('js', new Date());
 		gtag('config', id);
 
-		$('<script />', {
-			id: 'CMLS_CONTEST_GA',
-			async: true,
-			src:
-				'https://www.googletagmanager.com/gtag/js?id=' +
-				encodeURIComponent(id),
-		}).appendTo(DOC.body);
+		document.body.append(
+			<script
+				id="CMLS_CONTEST_GA"
+				async
+				src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`}
+			></script>
+		);
 
 		log.info('GA Installed', id);
 	};
+	// Install our GA tag if available
+	const gaID = $BASETAG.attr('data-google-analytics-id');
+	if (gaID) {
+		window._CMLS.installGoogleAnalytics(gaID);
+	}
+
+	// Facebook widgets
+	if (!window.FB) {
+		document.body.append(
+			<script
+				async
+				defer
+				crossorigin="anonymous"
+				src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"
+			></script>
+		);
+	}
 
 	/**
 	 * jQuery function to replace a given object's text with a new string
@@ -65,87 +139,4 @@ import Logger from 'Utils/Logger.js';
 			this.text(newText);
 		}
 	};
-
-	$(() => {
-		log.info('Initializing Engage-level scripting!');
-
-		// Install iframeResizer content script
-		$.getScript(
-			'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.min.js'
-		);
-
-		/**
-		 * Do not run inside the contest designer. Prevents code from running that may
-		 * alter the page structure, which may get saved permanently in the editor.
-		 */
-		if (window.self.name.indexOf('contestpreview-container') > -1) {
-			log.info('This is a preview, will not run engage-level scripting.');
-			return;
-		}
-
-		const $BASETAG = $('#CMLS_CONTEST', DOC);
-		if (!$BASETAG.length) {
-			log.error(
-				'You must add id="CMLS_CONTEST" to the script tag which loads this library!'
-			);
-			return;
-		}
-
-		// Auto-scroll iframe parent to top of iframe on rules popup
-		$('#fancyrules').on('click', function () {
-			if ('parentIFrame' in window) {
-				window.parentIFrame.scrollToOffset(0, 0);
-			}
-		});
-
-		// Install Bands in Town script if needed
-		if ($('a[href*="bandsintown.com"],a.bit-widget-initializer').length) {
-			log.info('Adding Bands in Town widget script');
-			$.getScript('https://widget.bandsintown.com/main.min.js');
-		}
-
-		// Install our GA tag if available
-		const gaID = $BASETAG.attr('data-google-analytics-id');
-		if (gaID) {
-			window._CMLS.installGoogleAnalytics(gaID);
-		} else {
-			log.info('No GA ID provided.');
-		}
-
-		/**
-		 * THIRD PARTY CODE
-		 */
-		// Twitter
-		if (!window.twttr) {
-			window.twttr = (function (d, s, id) {
-				var js,
-					fjs = d.getElementsByTagName(s)[0],
-					t = window.twttr || {};
-				if (d.getElementById(id)) return t;
-				js = d.createElement(s);
-				js.id = id;
-				js.src = 'https://platform.twitter.com/widgets.js';
-				fjs.parentNode.insertBefore(js, fjs);
-
-				t._e = [];
-				t.ready = function (f) {
-					t._e.push(f);
-				};
-
-				return t;
-			})(DOC, 'script', 'twitter-wjs');
-		}
-
-		// Facebook
-		(function (d, s, id) {
-			var js,
-				fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src =
-				'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0';
-			fjs.parentNode.insertBefore(js, fjs);
-		})(DOC, 'script', 'facebook-jssdk');
-	});
 })(jQuery, window.self);

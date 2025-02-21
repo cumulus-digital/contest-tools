@@ -1,21 +1,21 @@
 import './scss/base.scss';
 
+import { h, Fragment } from 'Utils/createElement.js';
+import waitFor from 'Utils/waitFor';
 import Logger from 'Utils/Logger.js';
+import triggerEvent from 'Utils/triggerEvent';
+
+const log = new Logger('CONTEST 3.0');
+
+if (window.addthis) {
+	log.info('Hiding AddThis');
+	window.addthis.layers((layer) => layer.destroy());
+}
+window.NO_ADDTHIS_HERE = true;
+window.parent.NO_ADDTHIS_HERE = true;
 
 (function ($, window, undefined) {
-	const log = new Logger('CONTEST');
-
-	// Disable freestar sidewall
-	function disableFreestarSidewall(w) {
-		if (w.freestar && w.freestar.config) {
-			w.freestar.config.disabledProducts =
-				w.freestar.config.disabledProducts || {};
-			w.freestar.config.disabledProducts.sideWall = true;
-		}
-	}
-	disableFreestarSidewall(window.self);
-	disableFreestarSidewall(window.parent);
-	disableFreestarSidewall(window.top);
+	const log = new Logger('CONTEST 3.0');
 
 	// Remove/hide AddThis
 	if (window.addthis) {
@@ -77,129 +77,117 @@ import Logger from 'Utils/Logger.js';
 		gtag('js', new Date());
 		gtag('config', id);
 
-		$('<script />', {
-			id: 'CMLS_CONTEST_GA',
-			async: true,
-			src:
-				'https://www.googletagmanager.com/gtag/js?id=' +
-				encodeURIComponent(id),
-		}).appendTo(DOC.body);
+		document.body.append(
+			<script
+				id="CMLS_CONTEST_GA"
+				async
+				src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`}
+			></script>
+		);
 
 		log.info('GA Installed', id);
 	};
+	const gaId = $BASETAG.attr('data-google-analytics-id');
+	if (gaId) installGoogleAnalytics(gaId);
 
-	// Install our GA tag if available
-	const gaID = $BASETAG.attr('data-google-analytics-id');
-	if (gaID) {
-		installGoogleAnalytics(gaID);
-	} else {
-		log.info('GA ID not provided.');
-	}
-
-	// Set up iFrameResizer for any iframes in our post
-	function setupIframeResizer(round) {
-		if (DOC.getElementById('iFrameResizer4210')) {
-			log.info('Already injected iframeResizer');
-			return;
-		}
-
-		if (!round) {
-			round = 1;
-		}
-		if (round > 30) {
-			log.warn(
-				`No iframes which need resizing were found in ${round} rounds`
+	// Setup iframe resizer
+	const ignoreFrames = [
+		'[src*="facebook.com"]',
+		'[src*="youtube"]',
+		'[src*="syndirect"]',
+		'.twitter-timeline',
+		'.isoframe-template',
+		'.isoframe-processed',
+	];
+	waitFor(
+		() => {
+			if (document.querySelector('script[src*="iframe-resizer"]')) {
+				log.info('iFrameResizer already exists!');
+				return 'CANCEL_WAIT';
+			}
+			const resizeFrames = document.querySelectorAll(
+				`.cmls-entry-content iframe[src]:not(${ignoreFrames.join(',')})`
 			);
-		}
-		let ignoreFrames = [
-			'[src*="facebook.com"]',
-			'[src*="youtube"]',
-			'[src*="syndirect"]',
-			'.twitter-timeline',
-			'.isoframe-template',
-			'.isoframe-processed',
-		];
-		const resizeFrames = $(
-			`.cmls-entry-content iframe[src]:not('${ignoreFrames.join(',')}')`
+			return resizeFrames?.length > 0 ? resizeFrames : false;
+		},
+		50000,
+		500
+	)
+		.then(() => {
+			document.head.append(
+				<script
+					id="iFrameResizer4210"
+					src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.3.11/js/iframeResizer.min.js"
+					async
+					onload={() => {
+						log.info('Setting up iFrameResizer');
+						document.defaultView.contestIframeResizerObject = [];
+						const resizeFrames = document.querySelectorAll(
+							`.cmls-entry-content iframe[src]:not(${ignoreFrames.join(',')})`
+						);
+						[...resizeFrames].forEach((ifr) => {
+							log.info('Attaching iFrameResizer to iframe', ifr);
+							window.contestIframeResizerObject.push(
+								window.iFrameResize(
+									{
+										log:
+											window._CMLS && window._CMLS.debug
+												? window._CMLS.debug
+												: false,
+										checkOrigin: false,
+										tolerance: 5,
+										onInit: function (ifr) {
+											ifr.addAttribute('init', true);
+											triggerEvent(ifr, 'cmls-ifr-init');
+											triggerEvent(
+												document,
+												'cmls-ifr-init'
+											);
+										},
+									},
+									ifr
+								)
+							);
+						});
+					}}
+				></script>
+			);
+		})
+		.catch((e) => {
+			log.info('Timed out waiting for contest iframe.');
+		});
+
+	// Set up BandsInTown widget if it exists
+	waitFor(
+		() => document.querySelectorAll('.bit-widget-initializer')?.length,
+		50000,
+		500
+	)
+		.then(() => {
+			document.body.append(
+				<script
+					async
+					defer
+					crossorigin="anonymous"
+					src="https://widget.bandsintown.com/main.min.js"
+				></script>
+			);
+		})
+		.catch(() => {
+			console.log('No BandsInTown widget.');
+		});
+
+	// Facebook widgets
+	if (!window.FB) {
+		document.body.append(
+			<script
+				async
+				defer
+				crossorigin="anonymous"
+				src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"
+			></script>
 		);
-
-		if (!resizeFrames.length) {
-			log.info(`No iframes which need resizing found in round ${round}`);
-			setTimeout(function () {
-				setupIframeResizer(round + 1);
-			}, 1000);
-			return;
-		}
-
-		const ifrSrc =
-			'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js';
-		const scr = DOC.createElement('script');
-		scr.onload = function () {
-			log.info('Setting up iFrameResizer');
-			DOC.defaultView.contestIframeResizerObject = [];
-			resizeFrames.each(function () {
-				log.info('Attaching iFrameResizer to iframe', this);
-				window.contestIframeResizerObject.push(
-					window.iFrameResize(
-						{
-							log:
-								window._CMLS && window._CMLS.debug
-									? window._CMLS.debug
-									: false,
-							checkOrigin: false,
-							heightCalculationMethod: 'lowestElement',
-							tolerance: 5,
-							onInit: function (ifr) {
-								const $ifr = $(ifr);
-								$ifr.attr('init', true);
-								$ifr.trigger('cmls-ifr-init');
-								$(DOC).trigger('cmls-ifr-init');
-							},
-						},
-						this
-					)
-				);
-			});
-		};
-		scr.id = 'iFrameResizer4210';
-		scr.src = ifrSrc;
-		DOC.body.appendChild(scr);
 	}
-	$(function () {
-		setupIframeResizer(1);
-	});
-
-	/**
-	 * If the player is using History.js, destroy the iFrameResizer
-	 * after navigation.
-	 */
-	function removeIframeResizer() {
-		if (window.contestIframeResizerObject) {
-			window.contestIframeResizerObject.forEach(function (ifr) {
-				ifr.iframeResizer.close();
-			});
-		}
-		if (window.History && window.History.adapter) {
-			window.History.Adapter.unbind(
-				window,
-				'statechange',
-				removeIframeResizer
-			);
-		}
-	}
-	if (window.History && window.History.Adapter) {
-		window.History.Adapter.bind(window, 'statechange', removeIframeResizer);
-	}
-
-	// Set up Bands In Town widget if placement exists
-	$(function () {
-		if ($('.bit-widget-initializer').length) {
-			$(
-				'<script src="https://widget.bandsintown.com/main.min.js"></scr' +
-					'ipt>'
-			).appendTo('body');
-		}
-	});
 
 	/**
 	 * jQuery function to replace a given object's html with a new string
@@ -224,39 +212,4 @@ import Logger from 'Utils/Logger.js';
 			this.html(newText);
 		}
 	};
-
-	// THIRD PARTY SOCIAL LIBRARIES
-
-	// Twitter
-	if (!window.twttr) {
-		window.twttr = (function (d, s, id) {
-			var js,
-				fjs = d.getElementsByTagName(s)[0],
-				t = window.twttr || {};
-			if (d.getElementById(id)) return t;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = 'https://platform.twitter.com/widgets.js';
-			fjs.parentNode.insertBefore(js, fjs);
-
-			t._e = [];
-			t.ready = function (f) {
-				t._e.push(f);
-			};
-
-			return t;
-		})(DOC, 'script', 'twitter-wjs');
-	}
-
-	// Facebook
-	(function (d, s, id) {
-		var js,
-			fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s);
-		js.id = id;
-		js.src =
-			'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0';
-		fjs.parentNode.insertBefore(js, fjs);
-	})(DOC, 'script', 'facebook-jssdk');
 })(jQuery, window.self);

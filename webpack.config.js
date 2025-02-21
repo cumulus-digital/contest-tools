@@ -28,17 +28,10 @@ module.exports = (env) => {
 	const host = process.env.HOST || 'localhost';
 
 	const cssLoaders = [
-		{
-			loader: MiniCSSExtractPlugin.loader,
-		},
+		{ loader: MiniCSSExtractPlugin.loader },
 		{
 			loader: require.resolve('css-loader'),
-			options: {
-				sourceMap: !isProduction,
-				modules: {
-					auto: true,
-				},
-			},
+			options: { sourceMap: !isProduction, modules: { auto: true } },
 		},
 		{
 			loader: require.resolve('postcss-loader'),
@@ -59,7 +52,7 @@ module.exports = (env) => {
 										},
 									],
 								}),
-						  ]
+							]
 						: postcssPlugins,
 				},
 			},
@@ -76,12 +69,12 @@ module.exports = (env) => {
 			contest_layout: './src/contest/scss/layout.scss',
 			text2win: './src/text-to-win/index.js',
 		},
-		output: {
-			filename: '[name].js',
-			path: resolve(process.cwd(), 'dist'),
-		},
+		output: { filename: '[name].js', path: resolve(process.cwd(), 'dist') },
 		resolve: {
 			alias: {
+				react: 'h',
+				'react-dom': 'h',
+				'react/jsx-runtime': 'h',
 				'lodash-es': 'lodash',
 				Utils: path.resolve(__dirname, 'src/utils'),
 			},
@@ -95,12 +88,8 @@ module.exports = (env) => {
 				new TerserPlugin({
 					parallel: true,
 					terserOptions: {
-						output: {
-							comments: /translators:/i,
-						},
-						compress: {
-							passes: 3,
-						},
+						output: { comments: /translators:/i },
+						compress: { passes: 3 },
 					},
 					extractComments: false,
 				}),
@@ -117,32 +106,36 @@ module.exports = (env) => {
 							babelrc: true,
 							configFile: true,
 							presets: [
+								'@babel/preset-react',
 								[
 									'@babel/preset-env',
 									{
 										loose: true,
 										debug: true,
 										useBuiltIns: 'usage',
-										corejs: require('core-js/package.json').version,
+										corejs: require('core-js/package.json')
+											.version,
 									},
+								],
+							],
+							plugins: [
+								['@babel/plugin-transform-runtime'],
+								[
+									'@babel/plugin-transform-react-jsx',
+									{ pragma: 'h', pragmaFrag: 'Fragment' },
 								],
 							],
 						},
 					},
 				},
-				{
-					test: /\.css$/,
-					use: cssLoaders,
-				},
+				{ test: /\.css$/, use: cssLoaders },
 				{
 					test: /\.(sc|sa)ss$/,
 					use: [
 						...cssLoaders,
 						{
 							loader: require.resolve('sass-loader'),
-							options: {
-								sourceMap: !isProduction,
-							},
+							options: { sourceMap: !isProduction },
 						},
 					],
 				},

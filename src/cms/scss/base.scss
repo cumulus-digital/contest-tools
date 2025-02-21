@@ -36,7 +36,8 @@ body:not(.is-fse-theme) {
 // Remove post header
 body:not(.is-fse-theme) .wrapper-content article.cmls-entry,
 body.is-fse-theme .cmls-entry-wrapper {
-	& > header {
+	& > header,
+	& > .wp-block-template-part > header {
 		display: none !important;
 	}
 }
@@ -44,4 +45,10 @@ body.is-fse-theme .cmls-entry-wrapper {
 // Remove margin on entry content
 .cmls-entry-content {
 	margin-top: 0;
+}
+
+.cmls-100w {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
 }
