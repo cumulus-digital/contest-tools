@@ -137,7 +137,7 @@ window.parent.NO_ADDTHIS_HERE = true;
 										checkOrigin: false,
 										tolerance: 5,
 										onInit: function (ifr) {
-											ifr.addAttribute('init', true);
+											ifr.setAttribute('init', true);
 											triggerEvent(ifr, 'cmls-ifr-init');
 											triggerEvent(
 												document,
