@@ -58,7 +58,7 @@ import Logger from 'Utils/Logger.js';
 				<script
 					async
 					defer
-					src="https://widgetv3.bandsintown.com/main.min.js"
+					src="https://widget.bandsintown.com/main.min.js"
 				></script>
 			);
 		})
