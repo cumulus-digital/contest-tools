@@ -168,8 +168,7 @@ window.parent.NO_ADDTHIS_HERE = true;
 				<script
 					async
 					defer
-					crossorigin="anonymous"
-					src="https://widget.bandsintown.com/main.min.js"
+					src="https://widgetv3.bandsintown.com/main.min.js"
 				></script>
 			);
 		})
