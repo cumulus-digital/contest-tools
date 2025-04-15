@@ -89,13 +89,15 @@ import Logger from 'Utils/Logger.js';
 		gtag('js', new Date());
 		gtag('config', id);
 
-		document.body.append(
-			<script
-				id="CMLS_CONTEST_GA"
-				async
-				src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`}
-			></script>
-		);
+		$(() => {
+			document.body.append(
+				<script
+					id="CMLS_CONTEST_GA"
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`}
+				></script>
+			);
+		});
 
 		log.info('GA Installed', id);
 	};
@@ -107,14 +109,16 @@ import Logger from 'Utils/Logger.js';
 
 	// Facebook widgets
 	if (!window.FB) {
-		document.body.append(
-			<script
-				async
-				defer
-				crossorigin="anonymous"
-				src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"
-			></script>
-		);
+		$(() => {
+			document.body.append(
+				<script
+					async
+					defer
+					crossorigin="anonymous"
+					src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"
+				></script>
+			);
+		});
 	}
 
 	/**
