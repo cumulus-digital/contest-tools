@@ -63,6 +63,7 @@ import Logger from 'Utils/Logger.js';
 					src="https://widget.bandsintown.com/main.min.js"
 				></script>
 			);
+			log.info('BandsInTown widget installed.');
 		})
 		.catch(() => {});
 
@@ -97,9 +98,8 @@ import Logger from 'Utils/Logger.js';
 					src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`}
 				></script>
 			);
+			log.info('GA Installed', id);
 		});
-
-		log.info('GA Installed', id);
 	};
 	// Install our GA tag if available
 	const gaID = $BASETAG.attr('data-google-analytics-id');

@@ -87,6 +87,11 @@ body {
 			box-sizing: border-box !important;
 		}
 
+		#fancybox-outer {
+			width: 100% !important;
+			height: 100% !important;
+		}
+
 		#fancybox-content,
 		#popup-rules {
 			width: auto !important;
