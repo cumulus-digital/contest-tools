@@ -38,11 +38,13 @@ import Logger from 'Utils/Logger.js';
 
 	log.info('Initializing Engage-level scripting!');
 
+	/*
 	window.addEventListener('click', (e) => {
 		if (e.target.matches('#fancyrules') && 'parentIFrame' in window) {
 			window.parentIFrame.scrollToOffset(0, 0);
 		}
 	});
+	*/
 
 	// Set up BandsInTown widget if it exists
 	waitFor(
