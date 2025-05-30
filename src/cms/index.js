@@ -106,7 +106,8 @@ window.parent.NO_ADDTHIS_HERE = true;
 				return 'CANCEL_WAIT';
 			}
 			const resizeFrames = document.querySelectorAll(
-				`.cmls-entry-content iframe[src]:not(${ignoreFrames.join(',')})`
+				`.cmls-entry-content iframe[src]:not(${ignoreFrames.join(',')}),` +
+					`.sc-content-area iframe[src]:not(${ignoreFrames.join(',')})`
 			);
 			return resizeFrames?.length > 0 ? resizeFrames : false;
 		},
@@ -123,7 +124,8 @@ window.parent.NO_ADDTHIS_HERE = true;
 						log.info('Setting up iFrameResizer');
 						document.defaultView.contestIframeResizerObject = [];
 						const resizeFrames = document.querySelectorAll(
-							`.cmls-entry-content iframe[src]:not(${ignoreFrames.join(',')})`
+							`.cmls-entry-content iframe[src]:not(${ignoreFrames.join(',')}),` +
+								`.sc-content-area iframe[src]:not(${ignoreFrames.join(',')})`
 						);
 						[...resizeFrames].forEach((ifr) => {
 							log.info('Attaching iFrameResizer to iframe', ifr);
