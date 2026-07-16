@@ -110,21 +110,43 @@ module.exports = (env) => {
 								[
 									'@babel/preset-env',
 									{
-										loose: true,
 										debug: true,
-										useBuiltIns: 'usage',
-										corejs: require('core-js/package.json')
-											.version,
 									},
 								],
 							],
 							plugins: [
 								['@babel/plugin-transform-runtime'],
 								[
+									'babel-plugin-polyfill-corejs3',
+									{
+										method: 'usage-global',
+										version: require('core-js/package.json')
+											.version,
+									},
+								],
+								[
 									'@babel/plugin-transform-react-jsx',
-									{ pragma: 'h', pragmaFrag: 'Fragment' },
+									{ runtime: 'classic', pragma: 'h', pragmaFrag: 'Fragment' },
 								],
 							],
+							assumptions: {
+								arrayLikeIsIterable: true,
+								constantReexports: true,
+								ignoreFunctionLength: true,
+								ignoreToPrimitiveHint: true,
+								mutableTemplateObject: true,
+								noClassCalls: true,
+								noDocumentAll: true,
+								objectRestNoSymbols: true,
+								privateFieldsAsProperties: true,
+								pureGetters: true,
+								setClassMethods: true,
+								setComputedProperties: true,
+								setPublicClassFields: true,
+								setSpreadProperties: true,
+								skipForOfIteratorClosing: true,
+								superIsCallableConstructor: true,
+							},
 						},
 					},
 				},
